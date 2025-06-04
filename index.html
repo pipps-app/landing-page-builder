@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Information for Your New Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .editor-container { /* Renamed to form-container for clarity, but keeping style name */
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .editor-header {
+            text-align: center;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .editor-header h1 {
+             margin-bottom: 0.2em;
+             color: #007bff;
+        }
+        .editor-header .pipps-branding-editor-header {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+        .editor-header .pipps-branding-editor-header img {
+            height: 20px; /* Adjust as needed */
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        h2, h3, h4 {
+            color: #333;
+            margin-bottom: 0.5em;
+        }
+
+        .form-section { /* This class is used for the main form area */
+            margin-bottom: 30px;
+            padding: 20px;
+            /* border: 1px solid #ddd; /* Optional: remove border if only one section */
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="url"],
+        .form-group textarea,
+        .form-group select {
+            width: calc(100% - 22px); /* Keep existing width calculation */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+        .form-group input[type="file"] { margin-top: 5px; }
+        .form-group .description { font-size: 0.9em; color: #777; margin-bottom: 5px; }
+        .services-list { list-style: none; padding: 0; }
+        .services-list li { display: flex; align-items: center; margin-bottom: 8px; }
+        .services-list input[type="text"] { flex-grow: 1; margin-right: 8px; }
+        .add-service-btn, .remove-service-btn {
+            padding: 8px 12px; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9em;
+        }
+        .add-service-btn { background-color: #28a745; }
+        .remove-service-btn { background-color: #dc3545; }
+        
+        .submit-btn { /* Re-using .submit-btn for the main submit button */
+            display: inline-block; padding: 12px 25px; background-color: #007bff; color: white;
+            border: none; border-radius: 4px; font-size: 1.1em; cursor: pointer; text-align: center;
+            margin-top: 20px; margin-right: 10px;
+        }
+        .submit-btn:hover { background-color: #0056b3; }
+        
+        .editor-footer { /* Keep footer styling */
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .editor-footer img {
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        #headingStylePreview {
+            padding: 10px;
+            border: 1px solid #eee;
+            margin-top: 10px;
+            font-size: 1.5em; /* Example size */
+            text-align: center;
+            min-height: 1.5em; /* Ensure it doesn't collapse */
+        }
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <div class="editor-header">
+            <h1>Business Information Form</h1>
+            <div class="pipps-branding-editor-header">
+                <img src="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png" alt="PIPPS Smart Apps Logo">
+                Help us create your amazing landing page by PIPPS Smart Apps
+            </div>
+        </div>
+
+        <div class="form-section"> <!-- Removed id="formSection" as it's the only main section now -->
+            <h2>Tell Us About Your Business</h2>
+            <form id="businessInfoForm" action="https://formspree.io/f/mzzgzezg" method="POST" enctype="multipart/form-data">
+                <h3>Business Details & Branding</h3>
+                 <div class="form-group">
+                    <label for="clientLogo">Upload Your Logo (PNG or JPG recommended)</label>
+                    <!-- Changed onchange handler for clientLogo -->
+                    <input type="file" id="clientLogo" name="clientLogo" accept="image/png, image/jpeg" onchange="processAndPreviewImage(this, 'clientLogoPreview')">
+                    <img id="clientLogoPreview" src="#" alt="Logo Preview" style="display:none; max-width: 150px; max-height: 80px; margin-top: 10px; border:1px solid #ddd;"/>
+                </div>
+                <div class="form-group">
+                    <label for="businessName">Business Name*</label>
+                    <input type="text" id="businessName" name="businessName" placeholder="Your Business Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="headingFont">Preferred Heading Font Style (Optional)</label>
+                    <select id="headingFont" name="headingFont">
+                        <option value="">-- Select a Font --</option>
+                        <option value="Arial, sans-serif">Arial (Modern Sans-Serif)</option>
+                        <option value="Georgia, serif">Georgia (Classic Serif)</option>
+                        <option value="\'Courier New\', monospace">Courier New (Monospace)</option>
+                        <option value="Verdana, sans-serif">Verdana (Clean & Simple)</option>
+                        <option value="\'Times New Roman\', Times, serif">Times New Roman (Traditional Serif)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="headingColor">Preferred Heading Color (Optional)</label>
+                    <select id="headingColor" name="headingColor">
+                        <option value="">-- Select a Color --</option>
+                        <option value="#333333">Black</option>
+                        <option value="#00008B">Dark Blue</option>
+                        <option value="#228B22">Forest Green</option>
+                        <option value="#DC143C">Crimson Red</option>
+                        <option value="#2F4F4F">Dark Slate Gray</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Heading Style Preview (based on your Business Name and selections above):</label>
+                    <div id="headingStylePreview">Your Business Name Preview</div>
+                </div>
+
+                <h3>About Your Business</h3>
+                <div class="form-group">
+                    <label for="tagline">Your Tagline or Slogan (if you have one)</label>
+                    <input type="text" id="tagline" name="tagline" placeholder="A short, catchy phrase that describes your business">
+                </div>
+                <div class="form-group">
+                    <label for="businessDescription">Business Description*</label>
+                    <textarea id="businessDescription" name="businessDescription" required placeholder="Tell us about your business, what you do, your mission, and what makes you unique. (The more detail, the better!)"></textarea>
+                </div>
+
+                <h3>Services / Products (Please list up to 10 main items)</h3>
+                <p class="description">List the key services or products you offer. This will help us feature them prominently.</p>
+                <ul id="servicesList" class="services-list">
+                    <li>
+                        <input type="text" name="serviceProduct[]" placeholder="Service / Product 1">
+                        <button type="button" class="remove-service-btn" onclick="removeService(this)">Remove</button>
+                    </li>
+                </ul>
+                <button type="button" class="add-service-btn" onclick="addService()">+ Add Another Service/Product</button>
+
+                <h3>Contact Information</h3>
+                <p class="description">Please provide at least a Phone Number or an Email Address for customer contact.</p>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Your business phone number">
+                    <label style="display: inline-block; margin-left: 10px; font-weight: normal;">
+                        <input type="checkbox" id="isWhatsapp" name="isWhatsapp">
+                        Is this a WhatsApp number?
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email Address for Customer Contact*</label>
+                    <input type="email" id="emailAddress" name="emailAddress" required placeholder="Your business email address">
+                </div>
+                <div class="form-group">
+                    <label for="businessAddress">Business Address (Optional)</label>
+                    <textarea id="businessAddress" name="businessAddress" placeholder="Street Address, City, State, Zip Code. Include if relevant for local customers."></textarea>
+                </div>
+
+                <h3>Business Images (Optional - up to 5 for gallery/page content)</h3>
+                <p class="description">Upload images that represent your business, products, or services. JPG, PNG formats are best.</p>
+                <div class="form-group">
+                    <label for="image1">Image 1:</label>
+                    <input type="file" id="image1" name="businessImage[]" accept="image/*" onchange="processAndPreviewImage(this, 'imgPreview1')">
+                    <img id="imgPreview1" src="#" alt="Image 1 Preview" style="display:none; max-width: 100px; max-height: 100px; margin-top: 5px; border:1px solid #ddd;"/>
+                </div>
+                 <div class="form-group">
+                    <label for="image2">Image 2:</label>
+                    <input type="file" id="image2" name="businessImage[]" accept="image/*" onchange="processAndPreviewImage(this, 'imgPreview2')">
+                    <img id="imgPreview2" src="#" alt="Image 2 Preview" style="display:none; max-width: 100px; max-height: 100px; margin-top: 5px; border:1px solid #ddd;"/>
+                </div>
+                 <div class="form-group">
+                    <label for="image3">Image 3:</label>
+                    <input type="file" id="image3" name="businessImage[]" accept="image/*" onchange="processAndPreviewImage(this, 'imgPreview3')">
+                    <img id="imgPreview3" src="#" alt="Image 3 Preview" style="display:none; max-width: 100px; max-height: 100px; margin-top: 5px; border:1px solid #ddd;"/>
+                </div>
+                <div class="form-group">
+                    <label for="image4">Image 4:</label>
+                    <input type="file" id="image4" name="businessImage[]" accept="image/*" onchange="processAndPreviewImage(this, 'imgPreview4')">
+                    <img id="imgPreview4" src="#" alt="Image 4 Preview" style="display:none; max-width: 100px; max-height: 100px; margin-top: 5px; border:1px solid #ddd;"/>
+                </div>
+                <div class="form-group">
+                    <label for="image5">Image 5:</label>
+                    <input type="file" id="image5" name="businessImage[]" accept="image/*" onchange="processAndPreviewImage(this, 'imgPreview5')">
+                    <img id="imgPreview5" src="#" alt="Image 5 Preview" style="display:none; max-width: 100px; max-height: 100px; margin-top: 5px; border:1px solid #ddd;"/>
+                </div>
+
+                <!-- Hidden field for Formspree to set Reply-To to client's email -->
+                <!-- The value will now be set dynamically by JavaScript -->
+                <input type="hidden" name="_replyto" value="">
+                <!-- Optional: Custom subject line for emails you receive -->
+                <input type="hidden" name="_subject" value="New Landing Page Info Submission - {{businessName}}">
+
+
+                <button type="submit" class="submit-btn">Send My Information</button>
+            </form>
+            <!-- Removed loadingMessage and errorMessage as Formspree handles submission feedback -->
+        </div>
+
+        <div class="editor-footer">
+            <img src="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png" alt="PIPPS Smart Apps Logo">
+            Secure Information Form by PIPPS Smart Apps
+        </div>
+    </div>
+
+    <script>
+        // Form elements for live heading preview
+        const businessNameInput = document.getElementById('businessName');
+        const headingFontSelect = document.getElementById('headingFont');
+        const headingColorSelect = document.getElementById('headingColor');
+        const headingStylePreview = document.getElementById('headingStylePreview');
+
+        // --- Live Heading Style Preview in Form ---
+        function updateFormHeadingPreview() {
+            const name = businessNameInput.value || 'Your Business Name Preview'; // Use placeholder if name is empty
+            const font = headingFontSelect.value || 'Arial, sans-serif'; // Default font if none selected
+            const color = headingColorSelect.value || '#333333'; // Default color if none selected
+            headingStylePreview.textContent = name;
+            headingStylePreview.style.fontFamily = font;
+            headingStylePreview.style.color = color;
+        }
+        if (businessNameInput) businessNameInput.addEventListener('input', updateFormHeadingPreview);
+        if (headingFontSelect) headingFontSelect.addEventListener('change', updateFormHeadingPreview);
+        if (headingColorSelect) headingColorSelect.addEventListener('change', updateFormHeadingPreview);
+        updateFormHeadingPreview(); // Initial call to set preview
+
+        // Get references to the email input and the hidden _replyto input
+        const emailAddressForReply = document.getElementById('emailAddress');
+        const hiddenReplyToInput = document.querySelector('input[name="_replyto"]');
+
+        // Check if both elements exist on the page
+        if (emailAddressForReply && hiddenReplyToInput) {
+            // Function to update the hidden _replyto field's value
+            function updateHiddenReplyTo() {
+                hiddenReplyToInput.value = emailAddressForReply.value;
+            }
+
+            // Add an event listener to the email input so that whenever it changes
+            // (e.g., user types, pastes, or autofills), the hidden field is updated.
+            emailAddressForReply.addEventListener('input', updateHiddenReplyTo);
+
+            // Also call it once when the page loads, in case the browser autofills the email field
+            // before the user interacts with it.
+            updateHiddenReplyTo();
+        }
+
+        // --- START OF NEW IMAGE OPTIMIZATION CODE ---
+
+        // Constants for image processing (adjust these values as needed)
+        const MAX_IMAGE_WIDTH = 1200; // Max width in pixels for resized images
+        const MAX_IMAGE_HEIGHT = 1200; // Max height in pixels for resized images
+        const JPEG_QUALITY = 0.8; // JPEG compression quality (0.0 to 1.0, 1.0 being highest quality/largest size)
+                                  // 0.8 (80%) is generally a good balance.
+
+        /**
+         * Reads an image file, resizes and compresses it using a canvas,
+         * updates the input field's file list, and displays a preview.
+         * @param {HTMLInputElement} input The file input element.
+         * @param {string} previewId The ID of the <img> element for preview.
+         */
+        function processAndPreviewImage(input, previewId) {
+            const preview = document.getElementById(previewId);
+
+            // Check if a file was selected
+            if (input.files && input.files[0]) {
+                const originalFile = input.files[0];
+                const reader = new FileReader();
+
+                // Set up the FileReader to load the file
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.onload = function() {
+                        const canvas = document.createElement('canvas');
+                        let width = img.width;
+                        let height = img.height;
+
+                        // Calculate new dimensions to fit within MAX_IMAGE_WIDTH/HEIGHT
+                        // This maintains the aspect ratio
+                        if (width > MAX_IMAGE_WIDTH || height > MAX_IMAGE_HEIGHT) {
+                            const aspectRatio = width / height;
+                            if (width > height) {
+                                width = MAX_IMAGE_WIDTH;
+                                height = width / aspectRatio;
+                            } else {
+                                height = MAX_IMAGE_HEIGHT;
+                                width = height * aspectRatio;
+                            }
+                        }
+
+                        canvas.width = width;
+                        canvas.height = height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, width, height); // Draw the image onto the canvas at new dimensions
+
+                        // Get the compressed image data as a Blob (File-like object)
+                        // This will convert the image to JPEG at the specified quality
+                        canvas.toBlob(function(blob) {
+                            if (blob) {
+                                // Create a new File object from the compressed Blob
+                                // We rename it to .jpeg and force the type for consistency
+                                const newFileName = originalFile.name.split('.').slice(0, -1).join('.') + '.jpeg';
+                                const resizedFile = new File([blob], newFileName, {
+                                    type: 'image/jpeg',
+                                    lastModified: Date.now()
+                                });
+
+                                // Replace the original file in the input's files list with the new, smaller file.
+                                // We use DataTransfer because input.files is a read-only FileList.
+                                const dataTransfer = new DataTransfer();
+                                dataTransfer.items.add(resizedFile);
+                                input.files = dataTransfer.files;
+
+                                // Update the preview image using the blob URL (or canvas Data URL)
+                                preview.src = URL.createObjectURL(blob); // More memory efficient than DataURL for preview
+                                preview.style.display = 'block';
+
+                                // Log original and new sizes to console (for your testing)
+                                console.log(`Original size: ${originalFile.size / 1024} KB`);
+                                console.log(`Resized size: ${resizedFile.size / 1024} KB`);
+
+                                // Clean up the URL object after the image is loaded in preview
+                                preview.onload = function() {
+                                    URL.revokeObjectURL(preview.src);
+                                };
+
+                            } else {
+                                console.error('Error creating Blob from canvas. Submitting original file.');
+                                // Fallback: If for some reason blob creation fails, show original preview.
+                                preview.src = e.target.result;
+                                preview.style.display = 'block';
+                            }
+                        }, 'image/jpeg', JPEG_QUALITY); // Specify output format and quality
+                    };
+                    img.src = e.target.result; // Set the source of the Image object to the loaded file
+                };
+
+                // Read the original file as a Data URL
+                reader.readAsDataURL(originalFile);
+            } else {
+                // If no file is selected, clear the preview
+                preview.src = '#';
+                preview.style.display = 'none';
+            }
+        }
+        // --- END OF NEW IMAGE OPTIMIZATION CODE ---
+
+        // Add/Remove Service/Product fields
+        const MAX_SERVICES = 10;
+        function addService() {
+            const servicesList = document.getElementById('servicesList');
+            if (servicesList.children.length < MAX_SERVICES) {
+                const newServiceItem = document.createElement('li');
+                const serviceInput = document.createElement('input');
+                serviceInput.type = 'text';
+                serviceInput.name = 'serviceProduct[]'; // Name for Formspree to collect as an array
+                serviceInput.placeholder = `Service / Product ${servicesList.children.length + 1}`;
+                
+                const removeBtn = document.createElement('button');
+                removeBtn.type = 'button';
+                removeBtn.classList.add('remove-service-btn');
+                removeBtn.textContent = 'Remove';
+                removeBtn.onclick = function() { removeService(this); };
+                
+                newServiceItem.appendChild(serviceInput);
+                newServiceItem.appendChild(removeBtn);
+                servicesList.appendChild(newServiceItem);
+            } else {
+                alert(`You can add a maximum of ${MAX_SERVICES} services/products.`);
+            }
+        }
+
+        function removeService(button) {
+            button.parentElement.remove();
+            // Re-number placeholders (optional but good UX)
+            const servicesList = document.getElementById('servicesList');
+            Array.from(servicesList.children).forEach((li, index) => {
+                li.querySelector('input[type="text"]').placeholder = `Service / Product ${index + 1}`;
+            });
+        }
+
+        // Basic client-side validation for contact info before Formspree submission
+        // Formspree also provides its own validation and error handling.
+        const businessInfoForm = document.getElementById('businessInfoForm');
+        if (businessInfoForm) {
+            businessInfoForm.addEventListener('submit', function(event) {
+                const phone = document.getElementById('phoneNumber').value.trim();
+                const email = document.getElementById('emailAddress').value.trim(); // email is already required by HTML
+                
+                // If phone is not required, this validation might be optional.
+                // Email is already marked as required in the input field.
+                // Formspree will handle "required" fields on its end.
+                // You can add more complex client-side validation here if needed.
+                // For example, if phone had specific format requirements.
+
+                // Example: Checking if at least one contact method is provided IF email was not HTML-required
+                /*
+                if (!phone && !email) {
+                    alert('Please provide either a Phone Number or an Email Address.');
+                    event.preventDefault(); // Stop submission
+                    return;
+                }
+                */
+            });
+        }
+
+    </script>
+</body>
+</html>
