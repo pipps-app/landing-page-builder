@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- FINAL COMPLETE AND CORRECTED VERSION -->
+<!-- FINAL, COMPLETE, AND DEBUGGED VERSION -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,8 +56,7 @@
                     <h3>Business Details & Branding</h3>
                     <div class="form-group">
                         <label for="clientLogo">Upload Your Logo (Optional)</label>
-                        <input type="file" id="clientLogo" name="clientLogo" accept="image/png, image/jpeg" onchange="processAndPreviewImage(this, 'clientLogoPreview')">
-                        <img id="clientLogoPreview" src="#" alt="Logo Preview" style="display:none; max-width: 150px; max-height: 80px; margin-top: 10px; border:1px solid #ddd;"/>
+                        <input type="file" id="clientLogo" name="clientLogo" accept="image/png, image/jpeg">
                     </div>
                     <div class="form-group">
                         <label for="businessName">Business Name*</label>
@@ -140,6 +139,7 @@
         </div>
     </div>
     <script>
+        // ROBUST SCRIPT TO PREVENT RE-SUBMISSION AND HANDLE "BACK BUTTON"
         window.addEventListener('pageshow', function(event) {
             if (sessionStorage.getItem('formSubmitted') === 'true') {
                 const formContainer = document.getElementById('form-container');
@@ -158,20 +158,16 @@
         });
 
         const form = document.getElementById('businessInfoForm');
-        const emailInput = document.getElementById('emailAddress');
-        const replyToInput = document.querySelector('input[name="_replyto"]');
-
-        if (emailInput && replyToInput) {
-            emailInput.addEventListener('input', function() {
-                replyToInput.value = emailInput.value;
-            });
-        }
-
+        
         if (form) {
             form.addEventListener('submit', function(event) {
-                if (emailInput) {
+                // This is the critical fix: Update _replyto right before submission
+                const emailInput = document.getElementById('emailAddress');
+                const replyToInput = document.querySelector('input[name="_replyto"]');
+                if (emailInput && replyToInput) {
                     replyToInput.value = emailInput.value;
                 }
+                
                 const submitButton = document.getElementById('submit-button');
                 if (submitButton) {
                     submitButton.disabled = true;
@@ -181,7 +177,7 @@
             });
         }
         
-        // --- HEADING PREVIEW SCRIPT ---
+        // HEADING PREVIEW SCRIPT
         const businessNameInput = document.getElementById('businessName');
         const headingFontSelect = document.getElementById('headingFont');
         const headingColorSelect = document.getElementById('headingColor');
@@ -197,10 +193,7 @@
         if(headingColorSelect) headingColorSelect.addEventListener('change', updateFormHeadingPreview);
         updateFormHeadingPreview();
 
-        // --- IMAGE PREVIEW SCRIPT ---
-        function processAndPreviewImage(input, previewId) { /* Add the full image processing script here if needed */ }
-
-        // --- DYNAMIC LISTS WITH LIMITS ---
+        // DYNAMIC LISTS WITH LIMITS
         function addService() {
             const list = document.getElementById('servicesList');
             if (list.children.length >= 10) { alert('Maximum of 10 services reached.'); return; }
