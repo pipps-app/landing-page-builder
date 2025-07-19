@@ -5,20 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You!</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1 { color: #007bff; }
-        p { color: #555; }
-        .back-link { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
-        .back-link:hover { background-color: #0056b3; }
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f0f2f5; color: #333;}
+        .container { max-width: 600px; margin: auto; padding: 40px; background-color: #fff; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #28a745; }
+        p { color: #555; line-height: 1.6; }
+        .warning-box {
+            padding: 15px;
+            margin-top: 25px;
+            background-color: #fffbe6;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+        }
+        .warning-box p {
+            font-weight: bold;
+            color: #856404;
+        }
+        .contact-info { margin-top: 20px; }
+        .home-link { display: inline-block; margin-top: 30px; padding: 12px 25px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s; }
+        .home-link:hover { background-color: #0056b3; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Thank You!</h1>
+        <h1>Thank You! Your Submission is Complete.</h1>
         <p>Your business information has been successfully submitted. We will be in touch shortly to create your amazing landing page!</p>
-        <p>If you have any immediate questions, feel free to contact us.</p>
-        <a href="index.html" class="back-link">Go back to the form</a>
+        
+        <div class="warning-box">
+            <p>Please do not go back or resubmit the form. We will use this submission as the final version.</p>
+        </div>
+
+        <div class="contact-info">
+            <p>If you made an error or need to make a correction, don't worry! Simply email us at <a href="mailto:info@pipps.app">info@pipps.app</a> and we will be happy to assist you.</p>
+        </div>
+
+        <a href="index.html" class="home-link">Back to Home Page</a>
     </div>
 </body>
 </html>
