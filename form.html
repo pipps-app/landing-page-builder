@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- FINAL, COMPLETE, AND DEBUGGED VERSION -->
+<!-- FINAL, COMPLETE, AND DEBUGGED VERSION WITH SPAM PROTECTION -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,31 +53,19 @@
             
             <div id="form-container">
                 <form id="businessInfoForm" action="https://formspree.io/f/mzzgzezg" method="POST" enctype="multipart/form-data">
+                    <!-- CORRECTED SPAM PROTECTION FIELDS -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="_subject" value="New Landing Page Info Submission">
+                    <input type="hidden" name="_format" value="plain">
+                    <input type="hidden" name="_replyto"> <!-- Corrected name: _replyto -->
+                    
                     <h3>Business Details & Branding</h3>
-                    <div class="form-group">
-                        <label for="clientLogo">Upload Your Logo (Optional)</label>
-                        <input type="file" id="clientLogo" name="clientLogo" accept="image/png, image/jpeg">
-                    </div>
-                    <div class="form-group">
-                        <label for="businessName">Business Name*</label>
-                        <input type="text" id="businessName" name="businessName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="tagline">Your Tagline or Slogan (Optional)</label>
-                        <input type="text" id="tagline" name="tagline">
-                    </div>
-                    <div class="form-group">
-                        <label for="headingFont">Preferred Heading Font Style (Optional)</label>
-                        <select id="headingFont" name="headingFont"><option value="">-- Select a Font --</option><option value="Arial, sans-serif">Arial</option><option value="Georgia, serif">Georgia</option><option value="'Courier New', monospace">Courier New</option><option value="Verdana, sans-serif">Verdana</option><option value="'Times New Roman', Times, serif">Times New Roman</option></select>
-                    </div>
-                    <div class="form-group">
-                        <label for="headingColor">Preferred Heading Color (Optional)</label>
-                        <select id="headingColor" name="headingColor"><option value="">-- Select a Color --</option><option value="#333333">Black</option><option value="#00008B">Dark Blue</option><option value="#228B22">Forest Green</option><option value="#DC143C">Crimson Red</option><option value="#2F4F4F">Dark Slate Gray</option></select>
-                    </div>
-                    <div class="form-group">
-                        <label>Heading Style Preview</label>
-                        <div id="headingStylePreview">Your Business Name Preview</div>
-                    </div>
+                    <div class="form-group"><label for="clientLogo">Upload Your Logo (Optional)</label><input type="file" id="clientLogo" name="clientLogo" accept="image/png, image/jpeg"></div>
+                    <div class="form-group"><label for="businessName">Business Name*</label><input type="text" id="businessName" name="businessName" required></div>
+                    <div class="form-group"><label for="tagline">Your Tagline or Slogan (Optional)</label><input type="text" id="tagline" name="tagline"></div>
+                    <div class="form-group"><label for="headingFont">Preferred Heading Font Style (Optional)</label><select id="headingFont" name="headingFont"><option value="">-- Select a Font --</option><option value="Arial, sans-serif">Arial</option><option value="Georgia, serif">Georgia</option><option value="'Courier New', monospace">Courier New</option><option value="Verdana, sans-serif">Verdana</option><option value="'Times New Roman', Times, serif">Times New Roman</option></select></div>
+                    <div class="form-group"><label for="headingColor">Preferred Heading Color (Optional)</label><select id="headingColor" name="headingColor"><option value="">-- Select a Color --</option><option value="#333333">Black</option><option value="#00008B">Dark Blue</option><option value="#228B22">Forest Green</option><option value="#DC143C">Crimson Red</option><option value="#2F4F4F">Dark Slate Gray</option></select></div>
+                    <div class="form-group"><label>Heading Style Preview</label><div id="headingStylePreview">Your Business Name Preview</div></div>
 
                     <h3>About Your Business (Optional)</h3>
                     <div class="form-group"><label for="businessStory">Your Business Story</label><textarea id="businessStory" name="businessStory" placeholder="Optional: Tell us your origin story."></textarea></div>
@@ -132,68 +120,72 @@
                     <div class="form-submission-warning">
                         <strong>Please submit this form only once.</strong> We will use your first submission as the official record.
                     </div>
-                    <input type="hidden" name="_replyto">
                     <button type="submit" id="submit-button" class="submit-btn">Send My Information</button>
                 </form>
             </div>
         </div>
     </div>
     <script>
-        // ROBUST SCRIPT TO PREVENT RE-SUBMISSION AND HANDLE "BACK BUTTON"
-        window.addEventListener('pageshow', function(event) {
-            if (sessionStorage.getItem('formSubmitted') === 'true') {
-                const formContainer = document.getElementById('form-container');
-                const submittedMessage = document.getElementById('form-submitted-message');
-                if (formContainer) formContainer.style.display = 'none';
-                if (submittedMessage) submittedMessage.style.display = 'block';
-            } else {
-                const form = document.getElementById('businessInfoForm');
-                if (form) form.reset();
-                const submitButton = document.getElementById('submit-button');
-                if (submitButton) {
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Send My Information';
+        document.addEventListener('DOMContentLoaded', function() {
+            // ROBUST SCRIPT TO PREVENT RE-SUBMISSION AND HANDLE "BACK BUTTON"
+            window.addEventListener('pageshow', function(event) {
+                if (sessionStorage.getItem('formSubmitted') === 'true') {
+                    const formContainer = document.getElementById('form-container');
+                    const submittedMessage = document.getElementById('form-submitted-message');
+                    if (formContainer) formContainer.style.display = 'none';
+                    if (submittedMessage) submittedMessage.style.display = 'block';
+                } else {
+                    const form = document.getElementById('businessInfoForm');
+                    if (form) form.reset();
+                    const submitButton = document.getElementById('submit-button');
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send My Information';
+                    }
                 }
+            });
+
+            // *** CRITICAL FIX: REAL-TIME _replyto UPDATE ***
+            const emailInput = document.getElementById('emailAddress');
+            const replyToInput = document.querySelector('input[name="_replyto"]'); // Corrected name
+            if (emailInput && replyToInput) {
+                replyToInput.value = emailInput.value;
+                emailInput.addEventListener('input', function() {
+                    replyToInput.value = emailInput.value;
+                });
             }
+
+            // SUBMISSION EVENT HANDLER
+            const form = document.getElementById('businessInfoForm');
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    const submitButton = document.getElementById('submit-button');
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Submitting...';
+                    }
+                    sessionStorage.setItem('formSubmitted', 'true');
+                });
+            }
+            
+            // HEADING PREVIEW SCRIPT
+            const businessNameInput = document.getElementById('businessName');
+            const headingFontSelect = document.getElementById('headingFont');
+            const headingColorSelect = document.getElementById('headingColor');
+            const headingStylePreview = document.getElementById('headingStylePreview');
+            function updateFormHeadingPreview() {
+                if (!businessNameInput || !headingStylePreview) return;
+                headingStylePreview.textContent = businessNameInput.value || 'Your Business Name Preview';
+                headingStylePreview.style.fontFamily = headingFontSelect ? headingFontSelect.value : 'Arial, sans-serif';
+                headingStylePreview.style.color = headingColorSelect ? headingColorSelect.value : '#333333';
+            }
+            if(businessNameInput) businessNameInput.addEventListener('input', updateFormHeadingPreview);
+            if(headingFontSelect) headingFontSelect.addEventListener('change', updateFormHeadingPreview);
+            if(headingColorSelect) headingColorSelect.addEventListener('change', updateFormHeadingPreview);
+            updateFormHeadingPreview();
         });
 
-        const form = document.getElementById('businessInfoForm');
-        
-        if (form) {
-            form.addEventListener('submit', function(event) {
-                // This is the critical fix: Update _replyto right before submission
-                const emailInput = document.getElementById('emailAddress');
-                const replyToInput = document.querySelector('input[name="_replyto"]');
-                if (emailInput && replyToInput) {
-                    replyToInput.value = emailInput.value;
-                }
-                
-                const submitButton = document.getElementById('submit-button');
-                if (submitButton) {
-                    submitButton.disabled = true;
-                    submitButton.textContent = 'Submitting...';
-                }
-                sessionStorage.setItem('formSubmitted', 'true');
-            });
-        }
-        
-        // HEADING PREVIEW SCRIPT
-        const businessNameInput = document.getElementById('businessName');
-        const headingFontSelect = document.getElementById('headingFont');
-        const headingColorSelect = document.getElementById('headingColor');
-        const headingStylePreview = document.getElementById('headingStylePreview');
-        function updateFormHeadingPreview() {
-            if (!businessNameInput || !headingStylePreview) return;
-            headingStylePreview.textContent = businessNameInput.value || 'Your Business Name Preview';
-            headingStylePreview.style.fontFamily = headingFontSelect ? headingFontSelect.value : 'Arial, sans-serif';
-            headingStylePreview.style.color = headingColorSelect ? headingColorSelect.value : '#333333';
-        }
-        if(businessNameInput) businessNameInput.addEventListener('input', updateFormHeadingPreview);
-        if(headingFontSelect) headingFontSelect.addEventListener('change', updateFormHeadingPreview);
-        if(headingColorSelect) headingColorSelect.addEventListener('change', updateFormHeadingPreview);
-        updateFormHeadingPreview();
-
-        // DYNAMIC LISTS WITH LIMITS
+        // DYNAMIC LIST FUNCTIONS
         function addService() {
             const list = document.getElementById('servicesList');
             if (list.children.length >= 10) { alert('Maximum of 10 services reached.'); return; }
