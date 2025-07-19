@@ -176,7 +176,7 @@
             </div>
             
             <div id="form-container">
-                <form id="businessInfoForm" action="https://formspree.io/f/mzzgzezg" method="POST" enctype="multipart/form-data">
+                <form id="businessInfoForm" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" enctype="multipart/form-data">
 
                     <h3>Business Details & Branding</h3>
                     <div class="form-group">
@@ -371,9 +371,9 @@
             headingStylePreview.style.fontFamily = font;
             headingStylePreview.style.color = color;
         }
-        businessNameInput.addEventListener('input', updateFormHeadingPreview);
-        headingFontSelect.addEventListener('change', updateFormHeadingPreview);
-        headingColorSelect.addEventListener('change', updateFormHeadingPreview);
+        if(businessNameInput) businessNameInput.addEventListener('input', updateFormHeadingPreview);
+        if(headingFontSelect) headingFontSelect.addEventListener('change', updateFormHeadingPreview);
+        if(headingColorSelect) headingColorSelect.addEventListener('change', updateFormHeadingPreview);
         updateFormHeadingPreview();
 
         const emailAddressForReply = document.getElementById('emailAddress');
@@ -485,7 +485,7 @@
             submitButton.disabled = true;
             submitButton.textContent = 'Submitting...';
             sessionStorage.setItem('formSubmitted', 'true');
-});
-</script>
+        });
+    </script>
 </body>
 </html>
