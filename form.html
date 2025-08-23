@@ -212,3 +212,219 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<!-- FINAL, COMPLETE, AND DEBUGGED VERSION WITH SPAM PROTECTION -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Information for Your New Landing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #333; line-height: 1.6; }
+        .editor-container { max-width: 900px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .form-logo-header { text-align: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .form-logo-header img { height: 60px; margin-bottom: 10px; }
+        .form-logo-header h1 { margin-bottom: 0.2em; color: #007bff; }
+        .form-logo-header p { font-size: 1.1em; color: #555; margin-top: 5px; }
+        h2, h3 { color: #333; margin-bottom: 0.5em; }
+        .form-section { margin-bottom: 30px; padding: 0 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+        .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="url"], .form-group textarea, .form-group select { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .form-group input[type="checkbox"] { width: auto; margin-right: 5px; }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+        .form-group input[type="file"] { margin-top: 5px; }
+        .form-group .description { font-size: 0.9em; color: #777; margin-bottom: 5px; }
+        #headingStylePreview { padding: 10px; border: 1px solid #eee; margin-top: 10px; font-size: 1.5em; text-align: center; min-height: 1.5em; }
+        .dynamic-list { list-style: none; padding: 0; }
+        .dynamic-list li { display: flex; flex-direction: column; margin-bottom: 20px; padding: 15px; border: 1px solid #eef; border-radius: 5px; background-color: #f8f9fa; }
+        .dynamic-list input[type="text"], .dynamic-list input[type="url"] { margin-bottom: 8px; }
+        .dynamic-list textarea { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; min-height: 60px; margin-bottom: 10px; }
+        .add-btn, .remove-btn { padding: 8px 12px; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9em; }
+        .add-btn { background-color: #28a745; margin-top: -10px; }
+        .remove-btn { background-color: #dc3545; align-self: flex-end; }
+        .submit-btn { display: inline-block; padding: 12px 25px; background-color: #007bff; color: white; border: none; border-radius: 4px; font-size: 1.1em; cursor: pointer; text-align: center; margin-top: 20px; }
+        .submit-btn:disabled { background-color: #aaa; cursor: not-allowed; }
+        #form-submitted-message { display: none; text-align: center; padding: 40px; background-color: #e9f7ef; border: 1px solid #28a745; border-radius: 8px; }
+        #form-submitted-message h3 { color: #28a745; }
+        .form-submission-warning { padding: 15px; margin: 20px 0; background-color: #fffbe6; border: 1px solid #ffc107; border-radius: 8px; text-align: center; font-size: 0.9em; color: #856404; }
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <div class="form-logo-header">
+            <img src="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png" alt="PIPPS Smart Apps Logo">
+            <h1>Business Information Form</h1>
+            <p>Help us create your amazing landing page by PIPPS Smart Apps</p>
+        </div>
+
+        <div class="form-section">
+            <div id="form-submitted-message">
+                <h3>Thank You!</h3>
+                <p>Your information has already been submitted from this browser.</p>
+                <p>If you need to make changes, please contact us directly.</p>
+            </div>
+            
+            <div id="form-container">
+                <form id="businessInfoForm" action="https://formspree.io/f/mzzgzezg" method="POST" enctype="multipart/form-data">
+                    <!-- CORRECTED SPAM PROTECTION FIELDS -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="_subject" value="New Landing Page Info Submission">
+                    <input type="hidden" name="_format" value="plain">
+                    <input type="hidden" name="_replyto"> <!-- Corrected name: _replyto -->
+                    
+                    <h3>Business Details & Branding</h3>
+                    <div class="form-group"><label for="clientLogo">Upload Your Logo (Optional)</label><input type="file" id="clientLogo" name="clientLogo" accept="image/png, image/jpeg"></div>
+                    <div class="form-group"><label for="businessName">Business Name*</label><input type="text" id="businessName" name="businessName" required></div>
+                    <div class="form-group"><label for="tagline">Your Tagline or Slogan (Optional)</label><input type="text" id="tagline" name="tagline"></div>
+                    <div class="form-group"><label for="headingFont">Preferred Heading Font Style (Optional)</label><select id="headingFont" name="headingFont"><option value="">-- Select a Font --</option><option value="Arial, sans-serif">Arial</option><option value="Georgia, serif">Georgia</option><option value="'Courier New', monospace">Courier New</option><option value="Verdana, sans-serif">Verdana</option><option value="'Times New Roman', Times, serif">Times New Roman</option></select></div>
+                    <div class="form-group"><label for="headingColor">Preferred Heading Color (Optional)</label><select id="headingColor" name="headingColor"><option value="">-- Select a Color --</option><option value="#333333">Black</option><option value="#00008B">Dark Blue</option><option value="#228B22">Forest Green</option><option value="#DC143C">Crimson Red</option><option value="#2F4F4F">Dark Slate Gray</option></select></div>
+                    <div class="form-group"><label>Heading Style Preview</label><div id="headingStylePreview">Your Business Name Preview</div></div>
+
+                    <h3>About Your Business (Optional)</h3>
+                    <div class="form-group"><label for="businessStory">Your Business Story</label><textarea id="businessStory" name="businessStory" placeholder="Optional: Tell us your origin story."></textarea></div>
+                    <div class="form-group"><label for="businessMission">Your Mission</label><textarea id="businessMission" name="businessMission" placeholder="Optional: What is your business's purpose?"></textarea></div>
+                    <div class="form-group"><label for="usp">What Makes You Unique?</label><textarea id="usp" name="uniqueSellingProposition" placeholder="Optional: What makes you different from competitors?"></textarea></div>
+
+                    <h3>Marketing & SEO</h3>
+                    <div class="form-group">
+                        <label for="primaryGoal">What is the main goal of your landing page?*</label>
+                        <select id="primaryGoal" name="primaryGoal" required><option value="">-- Select a Goal --</option><option value="Get customers to call me">Get customers to call me</option><option value="Get customers to email me">Get customers to email me</option><option value="Get customers to visit my address">Get customers to visit my address</option><option value="Get customers to book an appointment">Get customers to book an appointment</option><option value="Get customers to buy a product">Get customers to buy a product</option><option value="Inform customers about services">Inform customers about services</option></select>
+                    </div>
+                    <div class="form-group"><label for="targetAudience">Who is your ideal customer? (Optional)</label><input type="text" id="targetAudience" name="targetAudience" placeholder="Highly recommended for better results."></div>
+                    <div class="form-group"><label for="keywords">List 5-10 keywords (Optional)</label><input type="text" id="keywords" name="keywords" placeholder="Recommended for SEO."></div>
+                    
+                    <h3>Services / Products (Optional)</h3>
+                    <p class="description">List up to 10 key services or products.</p>
+                    <ul id="servicesList" class="dynamic-list"></ul>
+                    <button type="button" class="add-btn" onclick="addService()">+ Add Service/Product</button>
+
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address for Customer Contact*</label>
+                        <input type="email" id="emailAddress" name="emailAddress" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number (Optional)</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber">
+                        <label style="display: inline-block; margin-left: 10px; font-weight: normal;"><input type="checkbox" name="isWhatsapp"> Is this a WhatsApp number?</label>
+                    </div>
+                    <div class="form-group"><label for="businessAddress">Business Address (Optional)</label><textarea id="businessAddress" name="businessAddress"></textarea></div>
+                    
+                    <h3>Social Media & Website Links (Optional)</h3>
+                    <div class="form-group"><label for="primary_cta_link">Primary Website Link (e.g., Etsy, Booking Page)</label><input type="url" id="primary_cta_link" name="primary_cta_link"></div>
+                    <div class="form-group"><label for="social_facebook">Facebook</label><input type="url" name="social_facebook"></div>
+                    <div class="form-group"><label for="social_instagram">Instagram</label><input type="url" name="social_instagram"></div>
+                    <div class="form-group"><label for="social_twitter">X (Twitter)</label><input type="url" name="social_twitter"></div>
+                    <div class="form-group"><label for="social_linkedin">LinkedIn</label><input type="url" name="social_linkedin"></div>
+
+                    <h3>Other Custom Links (Optional)</h3>
+                    <p class="description">Add up to 5 other important links.</p>
+                    <ul id="otherLinksList" class="dynamic-list"></ul>
+                    <button type="button" class="add-btn" onclick="addOtherLink()">+ Add Another Link</button>
+
+                    <h3>Business Images (Optional)</h3>
+                    <p class="description">Upload up to 5 images.</p>
+                    <div class="form-group"><label for="image1">Image 1</label><input type="file" id="image1" name="businessImage[]" accept="image/*"></div>
+                    <div class="form-group"><label for="image2">Image 2</label><input type="file" id="image2" name="businessImage[]" accept="image/*"></div>
+                    <div class="form-group"><label for="image3">Image 3</label><input type="file" id="image3" name="businessImage[]" accept="image/*"></div>
+                    <div class="form-group"><label for="image4">Image 4</label><input type="file" id="image4" name="businessImage[]" accept="image/*"></div>
+                    <div class="form-group"><label for="image5">Image 5</label><input type="file" id="image5" name="businessImage[]" accept="image/*"></div>
+
+                    <div class="form-submission-warning">
+                        <strong>Please submit this form only once.</strong> We will use your first submission as the official record.
+                    </div>
+                    <button type="submit" id="submit-button" class="submit-btn">Send My Information</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ROBUST SCRIPT TO PREVENT RE-SUBMISSION AND HANDLE "BACK BUTTON"
+            window.addEventListener('pageshow', function(event) {
+                if (sessionStorage.getItem('formSubmitted') === 'true') {
+                    const formContainer = document.getElementById('form-container');
+                    const submittedMessage = document.getElementById('form-submitted-message');
+                    if (formContainer) formContainer.style.display = 'none';
+                    if (submittedMessage) submittedMessage.style.display = 'block';
+                } else {
+                    const form = document.getElementById('businessInfoForm');
+                    if (form) form.reset();
+                    const submitButton = document.getElementById('submit-button');
+                    if (submitButton) {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send My Information';
+                    }
+                }
+            });
+
+            // *** CRITICAL FIX: REAL-TIME _replyto UPDATE ***
+            const emailInput = document.getElementById('emailAddress');
+            const replyToInput = document.querySelector('input[name="_replyto"]'); // Corrected name
+            if (emailInput && replyToInput) {
+                replyToInput.value = emailInput.value;
+                emailInput.addEventListener('input', function() {
+                    replyToInput.value = emailInput.value;
+                });
+            }
+
+            // SUBMISSION EVENT HANDLER
+            const form = document.getElementById('businessInfoForm');
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    const submitButton = document.getElementById('submit-button');
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Submitting...';
+                    }
+                    sessionStorage.setItem('formSubmitted', 'true');
+                });
+            }
+            
+            // HEADING PREVIEW SCRIPT
+            const businessNameInput = document.getElementById('businessName');
+            const headingFontSelect = document.getElementById('headingFont');
+            const headingColorSelect = document.getElementById('headingColor');
+            const headingStylePreview = document.getElementById('headingStylePreview');
+            function updateFormHeadingPreview() {
+                if (!businessNameInput || !headingStylePreview) return;
+                headingStylePreview.textContent = businessNameInput.value || 'Your Business Name Preview';
+                headingStylePreview.style.fontFamily = headingFontSelect ? headingFontSelect.value : 'Arial, sans-serif';
+                headingStylePreview.style.color = headingColorSelect ? headingColorSelect.value : '#333333';
+            }
+            if(businessNameInput) businessNameInput.addEventListener('input', updateFormHeadingPreview);
+            if(headingFontSelect) headingFontSelect.addEventListener('change', updateFormHeadingPreview);
+            if(headingColorSelect) headingColorSelect.addEventListener('change', updateFormHeadingPreview);
+            updateFormHeadingPreview();
+        });
+
+        // DYNAMIC LIST FUNCTIONS
+        function addService() {
+            const list = document.getElementById('servicesList');
+            if (list.children.length >= 10) { alert('Maximum of 10 services reached.'); return; }
+            const index = list.children.length;
+            const newItem = document.createElement('li');
+            newItem.innerHTML = `<input type="text" name="serviceProduct[${index}][name]" placeholder="Service / Product ${index + 1} Name"><textarea name="serviceProduct[${index}][description]" placeholder="Short description"></textarea><button type="button" class="remove-btn" onclick="removeItem(this)">Remove</button>`;
+            list.appendChild(newItem);
+        }
+
+        function addOtherLink() {
+            const list = document.getElementById('otherLinksList');
+            if (list.children.length >= 5) { alert('Maximum of 5 custom links reached.'); return; }
+            const index = list.children.length;
+            const newItem = document.createElement('li');
+            newItem.innerHTML = `<input type="text" name="otherLink[${index}][label]" placeholder="Link Label (e.g., 'My Pinterest')"><input type="url" name="otherLink[${index}][url]" placeholder="Link URL"><button type="button" class="remove-btn" onclick="removeItem(this)">Remove</button>`;
+            list.appendChild(newItem);
+        }
+
+        function removeItem(button) {
+            if (button && button.parentElement) {
+                button.parentElement.remove();
+            }
+        }
+    </script>
+</body>
+</html>
+>>>>>>> 569e4d33d4c35b0a3e78b37e78c2d80c89cb7d30
