@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- READ-ONLY VERSION WITH UPDATED CTA. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Information for Your New Landing Page (Read-Only)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #333; line-height: 1.6; }
+        .editor-container { max-width: 900px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .form-logo-header { text-align: center; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .form-logo-header img { height: 60px; margin-bottom: 10px; }
+        .form-logo-header h1 { margin-bottom: 0.2em; color: #007bff; }
+        .form-logo-header p { font-size: 1.1em; color: #555; margin-top: 5px; }
+        h2, h3 { color: #333; margin-bottom: 0.5em; }
+        .form-section { margin-bottom: 30px; padding: 0 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+        .form-group input[type="text"], .form-group input[type="email"], .form-group input[type="url"], .form-group textarea { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background-color: #e9ecef; cursor: not-allowed; }
+        .form-group select { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background-color: #e9ecef; -webkit-appearance: none; appearance: none; }
+        .form-group input[type="checkbox"] { width: auto; margin-right: 5px; }
+        .form-group textarea { min-height: 100px; resize: none; }
+        .form-group .description { font-size: 0.9em; color: #777; margin-bottom: 5px; }
+        
+        .file-placeholder {
+            font-style: italic;
+            color: #6c757d;
+            padding-left: 10px;
+        }
+        
+        #headingStylePreview { padding: 10px; border: 1px solid #eee; margin-top: 10px; font-size: 1.5em; text-align: center; min-height: 1.5em; background-color: #f8f9fa; }
+        .dynamic-list { list-style: none; padding: 0; }
+        .dynamic-list li { display: flex; flex-direction: column; margin-bottom: 20px; padding: 15px; border: 1px solid #eef; border-radius: 5px; background-color: #f8f9fa; }
+        .dynamic-list input[type="text"], .dynamic-list input[type="url"], .dynamic-list textarea { margin-bottom: 8px; background-color: #e9ecef; }
+        
+        /* --- UPDATED CTA STYLES --- */
+        .cta-section {
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-top: 2px solid #007bff;
+            border-radius: 0 0 8px 8px; /* Rounds the bottom corners */
+            text-align: center;
+        }
+        .cta-section h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 10px;
+            background-color: #28a745; /* Green for 'Order' */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #218838;
+        }
+        .secondary-info {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .secondary-info a {
+            color: #0056b3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .secondary-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <div class="form-logo-header">
+            <img src="https://static.wixstatic.com/media/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png" alt="PIPPS Smart Apps Logo">
+            <h1>Business Information Form</h1>
+            <p>This is a read-only view of the form.</p>
+        </div>
+
+        <div class="form-section">
+            <div id="form-container">
+                <div>
+                    <!-- All form groups here... -->
+                    <h3>Business Details & Branding</h3>
+                    <div class="form-group"><label for="clientLogo">Upload Your Logo</label><input type="text" id="clientLogo" class="file-placeholder" name="clientLogo" disabled placeholder="Logo upload field"></div>
+                    <div class="form-group"><label for="businessName">Business Name*</label><input type="text" id="businessName" name="businessName" required disabled></div>
+                    <div class="form-group"><label for="tagline">Your Tagline or Slogan</label><input type="text" id="tagline" name="tagline" disabled></div>
+                    <div class="form-group"><label for="headingFont">Preferred Heading Font Style</label><select id="headingFont" name="headingFont"><option value="">-- Select a Font --</option><option value="Arial, sans-serif">Arial</option><option value="Georgia, serif">Georgia</option><option value="'Courier New', monospace">Courier New</option><option value="Verdana, sans-serif">Verdana</option><option value="'Times New Roman', Times, serif">Times New Roman</option></select></div>
+                    <div class="form-group"><label for="headingColor">Preferred Heading Color</label><select id="headingColor" name="headingColor"><option value="">-- Select a Color --</option><option value="#333333">Black</option><option value="#00008B">Dark Blue</option><option value="#228B22">Forest Green</option><option value="#DC143C">Crimson Red</option><option value="#2F4F4F">Dark Slate Gray</option></select></div>
+                    <div class="form-group"><label>Heading Style Preview</label><div id="headingStylePreview">Your Business Name Preview</div></div>
+
+                    <h3>About Your Business</h3>
+                    <div class="form-group"><label for="businessStory">Your Business Story</label><textarea id="businessStory" name="businessStory" placeholder="Optional: Tell us your origin story." disabled></textarea></div>
+                    <div class="form-group"><label for="businessMission">Your Mission</label><textarea id="businessMission" name="businessMission" placeholder="Optional: What is your business's purpose?" disabled></textarea></div>
+                    <div class="form-group"><label for="usp">What Makes You Unique?</label><textarea id="usp" name="uniqueSellingProposition" placeholder="Optional: What makes you different from competitors?" disabled></textarea></div>
+
+                    <h3>Marketing & SEO</h3>
+                    <div class="form-group">
+                        <label for="primaryGoal">What is the main goal of your landing page?*</label>
+                        <select id="primaryGoal" name="primaryGoal" required><option value="">-- Select a Goal --</option><option value="Get customers to call me">Get customers to call me</option><option value="Get customers to email me">Get customers to email me</option><option value="Get customers to visit my address">Get customers to visit my address</option><option value="Get customers to book an appointment">Get customers to book an appointment</option><option value="Get customers to buy a product">Get customers to buy a product</option><option value="Inform customers about services">Inform customers about services</option></select>
+                    </div>
+                    <div class="form-group"><label for="targetAudience">Who is your ideal customer?</label><input type="text" id="targetAudience" name="targetAudience" placeholder="Highly recommended for better results." disabled></div>
+                    <div class="form-group"><label for="keywords">List 5-10 keywords</label><input type="text" id="keywords" name="keywords" placeholder="Recommended for SEO." disabled></div>
+                    
+                    <h3>Services / Products</h3>
+                    <p class="description">List up to 10 key services or products.</p>
+                    <ul id="servicesList" class="dynamic-list">
+                        <li><input type="text" name="serviceProduct[0][name]" placeholder="Service / Product 1 Name" disabled><textarea name="serviceProduct[0][description]" placeholder="Short description" disabled></textarea></li>
+                    </ul>
+
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address for Customer Contact*</label>
+                        <input type="email" id="emailAddress" name="emailAddress" required disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" disabled>
+                        <label style="display: inline-block; margin-left: 10px; font-weight: normal;"><input type="checkbox" name="isWhatsapp" disabled> Is this a WhatsApp number?</label>
+                    </div>
+                    <div class="form-group"><label for="businessAddress">Business Address</label><textarea id="businessAddress" name="businessAddress" disabled></textarea></div>
+                    
+                    <h3>Social Media & Website Links</h3>
+                    <div class="form-group"><label for="primary_cta_link">Primary Website Link (e.g., Etsy, Booking Page)</label><input type="url" id="primary_cta_link" name="primary_cta_link" disabled></div>
+                    <div class="form-group"><label for="social_facebook">Facebook</label><input type="url" name="social_facebook" disabled></div>
+                    <div class="form-group"><label for="social_instagram">Instagram</label><input type="url" name="social_instagram" disabled></div>
+                    <div class="form-group"><label for="social_twitter">X (Twitter)</label><input type="url" name="social_twitter" disabled></div>
+                    <div class="form-group"><label for="social_linkedin">LinkedIn</label><input type="url" name="social_linkedin" disabled></div>
+
+                    <h3>Other Custom Links</h3>
+                    <p class="description">Add up to 5 other important links.</p>
+                    <ul id="otherLinksList" class="dynamic-list">
+                         <li><input type="text" name="otherLink[0][label]" placeholder="Link Label (e.g., 'My Pinterest')" disabled><input type="url" name="otherLink[0][url]" placeholder="Link URL" disabled></li>
+                    </ul>
+
+                    <h3>Business Images</h3>
+                    <p class="description">Upload up to 5 images.</p>
+                    <div class="form-group"><label for="image1">Image 1</label><input type="text" id="image1" class="file-placeholder" name="businessImage[]" disabled placeholder="Image 1 upload field"></div>
+                    <div class="form-group"><label for="image2">Image 2</label><input type="text" id="image2" class="file-placeholder" name="businessImage[]" disabled placeholder="Image 2 upload field"></div>
+                    <div class="form-group"><label for="image3">Image 3</label><input type="text" id="image3" class="file-placeholder" name="businessImage[]" disabled placeholder="Image 3 upload field"></div>
+                    <div class="form-group"><label for="image4">Image 4</label><input type="text" id="image4" class="file-placeholder" name="businessImage[]" disabled placeholder="Image 4 upload field"></div>
+                    <div class="form-group"><label for="image5">Image 5</label><input type="text" id="image5" class="file-placeholder" name="businessImage[]" disabled placeholder="Image 5 upload field"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- --- NEW CTA SECTION --- -->
+        <div class="form-section cta-section">
+            <h3>Ready to Launch Your New Page?</h3>
+            <p>To get started, place your order securely through our Shopify store. After your purchase, you will be able to submit this form.</p>
+            <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button" target="_blank">Order Your Landing Page Now</a>
+            <p class="secondary-info">Want to see more examples? <a href="https://pages.pipps.app" target="_blank">Visit pages.pipps.app</a></p>
+        </div>
+        
+    </div>
+</body>
+</html>
