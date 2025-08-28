@@ -1,0 +1,95 @@
+/* External CSS for Landing Page */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Hero Section */
+#hero {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+}
+#hero h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+#hero button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* What You'll Need Section */
+#what-you-need {
+    padding: 80px 0;
+    text-align: center;
+    background: #ff0000 !important;
+    color: #fff !important;
+    border: 10px solid #fffa90 !important;
+    display: block !important;
+    visibility: visible !important;
+    min-height: 300px;
+}
+#what-you-need h2 {
+    color: #fff !important;
+    font-size: 3em !important;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+#what-you-need ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff !important;
+}
+#what-you-need li {
+    margin: 20px 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+/* Features Section */
+#features {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+#features h2 {
+    color: #007bff;
+    font-size: 2em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+#features .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#features div {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+#features h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+#features p {
+    font-size: 1em;
+}
