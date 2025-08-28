@@ -1,93 +1,780 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0067)file:///C:/Users/juliet/Downloads/improved-pipps-landing%20(3).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIPPS Landing Page Builder - Your Partner for Stunning Landing Pages</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo-branding">
-                <img src="images/pipps_logo_official.png" alt="PIPPS Smart Apps Logo">
-                <h2>PIPPS Smart Apps</h2>
-            </div>
-            <nav class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#examples">Examples</a>
-                <a href="#contact">Contact</a>
-                <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button" style="margin-left: 30px; padding: 10px 20px; font-size: 0.9em; border-radius: 5px; box-shadow: none;">Get Started Now!</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h1>Launch Your Business Online with a Stunning Landing Page</h1>
-            <p>PIPPS Landing Page Builder designs professional, effective, and mobile-friendly landing pages that help you attract customers and grow your business – fast and hassle-free.</p>
-            <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Start Your Landing Page Today!</a>
-        </div>
-    </section>
-
-    <!-- What You'll Need Section -->
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIPPS Landing Page Builder - Your Partner for Stunning Landing Pages</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="./index_files/css2" rel="stylesheet">
     <style>
-        /* Ensure What You'll Need section is always visible */
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo-branding {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-branding img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-branding h2 {
+            color: #007bff;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+            transform: translateY(-2px);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white !important;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+        }
+
+        /* Hero Section - Enhanced */
+        #hero {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,100 1000,0"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        #hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 25px;
+            font-weight: 700;
+            line-height: 1.2;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        #hero p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.2s forwards;
+        }
+
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.4s forwards;
+        }
+
+        .early-access-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* What You'll Need - Improved Visual Design */
         #what-you-need {
-            background-color: #f8f9fa !important;
-            padding: 60px 0 !important;
-            text-align: center !important;
-            display: block !important;
-            visibility: visible !important;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            position: relative;
         }
+
+        #what-you-need::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 25% 75%, rgba(0, 123, 255, 0.05) 0%, transparent 50%),
+                              radial-gradient(circle at 75% 25%, rgba(0, 123, 255, 0.05) 0%, transparent 50%);
+        }
+
+        #what-you-need .container {
+            position: relative;
+            z-index: 2;
+        }
+
         #what-you-need h2 {
-            color: #007bff !important;
-            font-size: 2.5em !important;
-            margin-bottom: 30px !important;
-            font-weight: 700 !important;
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
         }
-        #what-you-need ul {
-            list-style: none !important;
-            padding: 0 !important;
-            margin: 0 auto !important;
-            max-width: 600px !important;
+
+        #what-you-need .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        #what-you-need li {
-            margin: 20px 0 !important;
-            font-size: 1.2em !important;
-            color: #333 !important;
-            padding: 15px !important;
-            background: white !important;
-            border-radius: 8px !important;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+
+        .needs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .need-item {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,123,255,0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .need-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #007bff, #66b3ff);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .need-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .need-item:hover {
+            transform: translateY(-8px);
+            border-color: #007bff;
+            box-shadow: 0 20px 40px rgba(0,123,255,0.2);
+        }
+
+        .need-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #007bff, #66b3ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .need-item:hover .need-icon {
+            transform: scale(1.1);
+        }
+
+        .need-item strong {
+            font-size: 1.1em;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .need-item p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        /* Features Section - Enhanced Grid */
+        #features {
+            padding: 100px 0;
+            background: white;
+        }
+
+        #features h2 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,123,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-8px);
+            border-color: #007bff;
+            box-shadow: 0 20px 50px rgba(0,123,255,0.15);
+        }
+
+        .feature-item:hover::before {
+            left: 100%;
+        }
+
+        .feature-item h3 {
+            color: #007bff;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            color: #666;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* How It Works - Timeline Style */
+        #how-it-works {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        #how-it-works h2 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 70px;
+            font-weight: 700;
+        }
+
+        .how-it-works-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .step-item {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .step-item::before {
+            content: attr(data-step);
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2em;
+            box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+        }
+
+        .step-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-item h3 {
+            color: #333;
+            font-size: 1.4em;
+            margin: 30px 0 20px;
+            font-weight: 600;
+        }
+
+        .step-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* New Founder Story Section */
+        #founder-story {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .founder-text h2 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .founder-text p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .founder-image {
+            text-align: center;
+            position: relative;
+        }
+
+        .founder-placeholder {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            box-shadow: 0 20px 40px rgba(0,123,255,0.3);
+        }
+
+        /* Pricing Section - Enhanced */
+        #pricing {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        #pricing h2 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .pricing-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 60px;
+        }
+
+        .pricing-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 2px solid #007bff;
+        }
+
+        .pricing-header {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .early-bird-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .pricing-main {
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .pricing-price {
+            font-size: 3.5em;
+            color: #007bff;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .pricing-details {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            padding: 0 30px 30px;
+        }
+
+        .pricing-features h4 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        .pricing-features ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            color: #666;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .pricing-cta {
+            padding: 0 30px 40px;
+            text-align: center;
+        }
+
+        /* New FAQ Section */
+        #faq {
+            padding: 100px 0;
+            background: white;
+        }
+
+        #faq h2 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: #e9ecef;
+        }
+
+        .faq-question {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .faq-answer {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Examples Section - Improved */
+        #examples {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        #examples h2 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .examples-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 60px;
+        }
+
+        .website-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .website-example {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .website-example:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0,123,255,0.15);
+        }
+
+        .website-example img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: linear-gradient(45deg, #e9ecef 25%, transparent 25%), linear-gradient(-45deg, #e9ecef 25%, transparent 25%);
+            background-size: 20px 20px;
+        }
+
+        .website-example-caption {
+            padding: 30px;
+        }
+
+        .website-example-caption h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .website-example-caption p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Footer - Enhanced */
+        .footer {
+            background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer .container {
+            text-align: center;
+        }
+
+        .footer .logo-branding {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .footer .logo-branding h2 {
+            color: #007bff;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            color: #ccc;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #66b3ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .founder-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .founder-placeholder {
+                width: 200px;
+                height: 200px;
+            }
+
+            .needs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .how-it-works-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .website-examples {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="header">
+    <header class="header" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);">
         <div class="container">
             <div class="logo-branding">
-                <img src="images/pipps_logo_official.png" alt="PIPPS Smart Apps Logo">
+                <img src="file:///C:/Users/juliet/Downloads/images/pipps_logo_official.png" alt="PIPPS Smart Apps Logo">
                 <h2>PIPPS Smart Apps</h2>
             </div>
             <nav class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#examples">Examples</a>
-                <a href="#contact">Contact</a>
+                <a href="file:///C:/Users/juliet/Downloads/improved-pipps-landing%20(3).html#features">Features</a>
+                <a href="file:///C:/Users/juliet/Downloads/improved-pipps-landing%20(3).html#how-it-works">How It Works</a>
+                <a href="file:///C:/Users/juliet/Downloads/improved-pipps-landing%20(3).html#pricing">Pricing</a>
+                <a href="file:///C:/Users/juliet/Downloads/improved-pipps-landing%20(3).html#examples">Examples</a>
+                <a href="file:///C:/Users/juliet/Downloads/improved-pipps-landing%20(3).html#faq">FAQ</a>
                 <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Get Started Now!</a>
             </nav>
         </div>
@@ -96,52 +783,97 @@
     <!-- Hero Section -->
     <section id="hero">
         <div class="container">
-            <h1>Launch Your Business Online with a Stunning Landing Page</h1>
-            <p>PIPPS Landing Page Builder designs professional, effective, and mobile-friendly landing pages that help you attract customers and grow your business – fast and hassle-free.</p>
-            <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Start Your Landing Page Today!</a>
+            <div class="hero-content">
+                <div class="early-access-badge">Now Available - Early Access Pricing</div>
+                <h1>Launch Your Business Online with a Stunning Landing Page</h1>
+                <p>PIPPS Landing Page Builder designs professional, effective, and mobile-friendly landing pages that help you attract customers and grow your business — fast and hassle-free.</p>
+                <div class="hero-cta">
+                    <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Start Your Landing Page Today!</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- What You'll Need Section -->
+            <!-- What You'll Need Section -->
     <section id="what-you-need">
         <div class="container">
             <h2>What You'll Need</h2>
-            <ul>
-                <li>✓ Business Name & Tagline</li>
-                <li>✓ Logo & Brand Colors</li>
-                <li>✓ Product Photos</li>
-                <li>✓ Contact Details</li>
-                <li>✓ Social Media Links</li>
-            </ul>
+            <p class="section-subtitle">Getting started is simple. Just gather these basic business essentials and we'll handle the rest.</p>
+            <div class="needs-grid">
+                <div class="need-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="need-icon">1</div>
+                    <strong>Business Name &amp; Tagline</strong>
+                    <p>Your business name and a short tagline that describes what you do</p>
+                </div>
+                <div class="need-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="need-icon">2</div>
+                    <strong>Logo &amp; Brand Colors</strong>
+                    <p>Your company logo and preferred colors for your brand</p>
+                </div>
+                <div class="need-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="need-icon">3</div>
+                    <strong>Product Photos</strong>
+                    <p>Up to 5 high-quality photos of your products or services</p>
+                </div>
+                <div class="need-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="need-icon">4</div>
+                    <strong>Contact Details</strong>
+                    <p>Your email, phone number, and business address</p>
+                </div>
+                <div class="need-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="need-icon">5</div>
+                    <strong>Social Media Links</strong>
+                    <p>Links to your Facebook, Instagram, and other social profiles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Story Section -->
+    <section id="founder-story">
+        <div class="container">
+            <div class="founder-content">
+                <div class="founder-text">
+                    <h2>Built by Proven Technology Experts</h2>
+                    <p>PIPPS Landing Page Builder is developed by J.C Epiphany Limited, a company with over 25 years of experience building secure, bug-free software systems. Our proven technology has powered healthcare operations, processing prescriptions and laboratory transactions in continuous operation.</p>
+                    <p>In those 25+ years, we've developed an intelligent inventory management, issuing and distribution system that continues to operate reliably today. With more than 35 years of database and software expertise, we create systems that are reliable, scalable, and built to last.</p>
+                    <p><strong>Now we're bringing that same level of enterprise-grade expertise to help small businesses establish their professional online presence.</strong></p>
+                </div>
+                <div class="founder-image">
+                    <div class="founder-placeholder">
+                        25+ Years of Proven Software Excellence
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="section">
+    <section id="features">
         <div class="container">
             <h2>Why Choose PIPPS Landing Page Builder?</h2>
             <div class="features-grid">
-                <div class="feature-item">
-                    <h3>Custom & Professional Design</h3>
+                <div class="feature-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <h3>Custom &amp; Professional Design</h3>
                     <p>We craft unique landing pages tailored to your brand's identity and specific business needs.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
                     <h3>Mobile-Responsive</h3>
                     <p>Your landing page will look fantastic and perform perfectly on any device, from desktops to smartphones.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
                     <h3>Fast Turnaround</h3>
                     <p>Get your online presence established quickly without the long wait times of traditional website development.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
                     <h3>Lead Generation Focused</h3>
                     <p>Designed with clear calls-to-action to convert visitors into valuable leads or customers.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
                     <h3>Affordable Solutions</h3>
                     <p>High-quality web presence doesn't have to break the bank. Our services are budget-friendly.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
                     <h3>Simple Process</h3>
                     <p>Just provide your business details and we'll handle the rest, making it incredibly easy for you.</p>
                 </div>
@@ -149,47 +881,49 @@
         </div>
     </section>
 
-    <section id="how-it-works" class="section">
+    <!-- How It Works Section -->
+    <section id="how-it-works">
         <div class="container">
             <h2>Our Simple Process</h2>
             <div class="how-it-works-steps">
-                <div class="step-item" data-step="1">
+                <div class="step-item" data-step="1" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
                     <h3>Tell Us About Your Business</h3>
                     <p>Fill out our easy-to-use form with your business name, description, services, contact info, and any images you have.</p>
                 </div>
-                <div class="step-item" data-step="2">
+                <div class="step-item" data-step="2" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
                     <h3>We Design Your Page</h3>
                     <p>Our expert team takes your information and crafts a stunning, customized landing page that represents your brand.</p>
                 </div>
-                <div class="step-item" data-step="3">
+                <div class="step-item" data-step="3" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
                     <h3>Launch Your Online Presence</h3>
                     <p>Once approved, your professional landing page is live, ready to attract new customers and grow your reach!</p>
                 </div>
             </div>
-            <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button" style="margin-top: 50px;">Ready to Get Started?</a>
-            
-            <div class="text-center" style="margin-top: 30px;">
-                <p>After payment, you'll receive access to our easy-to-complete business information form</p>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Ready to Get Started?</a>
+                <p style="margin-top: 30px; color: #666;">After payment, you'll receive access to our easy-to-complete business information form</p>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="section">
+    <!-- Pricing Section -->
+    <section id="pricing">
         <div class="container">
-            <h2>Simple, Transparent Pricing</h2>
-            <p>The perfect solution to get your business online quickly and professionally.</p>
+            <h2>Early Access Pricing</h2>
+            <p class="pricing-subtitle">Launch special for the first 100 businesses</p>
             
             <div class="pricing-container">
                 <div class="pricing-header">
+                    <div class="early-bird-badge">Limited Time</div>
                     <h3>Professional Landing Page Package</h3>
-                    <p>Everything you need to establish a powerful online presence.</p>
+                    <p>Everything you need to establish a powerful online presence</p>
                 </div>
                 
                 <div class="pricing-main">
                     <div class="pricing-price">$149</div>
                     <div class="pricing-details">
                         <p><strong>One-time setup fee</strong></p>
-                        <p>Plus $20/month Hosting & Maintenance</p>
+                        <p>Plus $20/month Hosting &amp; Maintenance</p>
                     </div>
                 </div>
                 
@@ -199,316 +933,400 @@
                         <li>Professional Custom Design</li>
                         <li>Mobile-Responsive Layout</li>
                         <li>Business Information Integration</li>
-                        <li>Contact Form & Social Links</li>
+                        <li>Contact Form &amp; Social Links</li>
                         <li>SEO Optimization</li>
                         <li>Free yourname.pipps.app Subdomain</li>
-                        <li>Secure Hosting & Daily Backups</li>
+                        <li>Secure Hosting &amp; Daily Backups</li>
                         <li>Security Monitoring</li>
                         <li>Technical Support</li>
+                        <li>30-Day Money-Back Guarantee</li>
                     </ul>
                 </div>
                 
                 <div class="pricing-cta">
-                    <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Get Started Today</a>
-                </div>
-                
-                <div class="pricing-options">
-                    <h4>Optional Add-ons:</h4>
-                    <div class="pricing-options-grid">
-                        <div class="pricing-option-item">
-                            <h5>Additional Pages</h5>
-                            <p>$50 per page + $5/month</p>
-                        </div>
-                        <div class="pricing-option-item">
-                            <h5>Custom Domain</h5>
-                            <p>$25 one-time setup</p>
-                        </div>
-                        <div class="pricing-option-item">
-                            <h5>Content Changes</h5>
-                            <p>Starting at $15</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="pricing-note">
-                <p>All packages include a free custom subdomain (yourname.pipps.app). Our monthly plan ensures your page remains fast, secure, and online. Need something custom? <a href="#contact">Contact us</a> for a personalized quote.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="ai-process" class="section">
-        <div class="container">
-            <h2>How We Transform Your Information</h2>
-            <p>See how our AI-powered system transforms your business information into a stunning landing page</p>
-            
-            <div class="ai-process">
-                <div class="ai-process-steps">
-                    <div class="ai-process-step">
-                        <h3>Step 1: You Complete Our Business Form</h3>
-                        <img src="images/simplified_form_mockup.png" alt="Business Information Form" class="ai-process-image">
-                    </div>
-                    <div class="ai-process-arrow">↓</div>
-                    <div class="ai-process-step">
-                        <h3>Step 2: Our AI Creates Your Custom Landing Page</h3>
-                        <p>Based on your information, our system generates a professional website tailored to your business</p>
-                    </div>
-                    <div class="ai-process-arrow">↓</div>
-                    <div class="ai-process-step">
-                        <h3>Step 3: Your Business Gets a Professional Online Presence</h3>
-                        <p>Here are examples of landing pages created with our system:</p>
-                    </div>
+                    <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Claim Your Spot Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="examples" class="section">
+    <!-- Examples Section -->
+    <section id="examples">
         <div class="container">
             <h2>Website Examples</h2>
-            <p>Check out these stunning landing pages we've created for our clients</p>
+            <p class="examples-subtitle">Here's what your landing page could look like</p>
             
             <div class="website-examples">
-                <div class="website-example">
-                    <img src="images/genericsample1.png" alt="Sample Website 1">
+                <div class="website-example" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <img src="file:///C:/Users/juliet/Downloads/images/genericsample1.png" alt="Sample Website 1">
                     <div class="website-example-caption">
-                        <h3>Sample Website 1</h3>
-                        <p>A professional landing page for a service business</p>
+                        <h3>Service Business Template</h3>
+                        <p>A professional landing page perfect for consultants, contractors, and service providers</p>
                     </div>
                 </div>
-                <div class="website-example">
-                    <img src="images/genericsample2.png" alt="Sample Website 2">
+                <div class="website-example" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <img src="file:///C:/Users/juliet/Downloads/images/genericsample2.png" alt="Sample Website 2">
                     <div class="website-example-caption">
-                        <h3>Sample Website 2</h3>
-                        <p>An attractive landing page for a local business</p>
+                        <h3>Local Business Template</h3>
+                        <p>An attractive landing page designed for restaurants, shops, and local services</p>
                     </div>
                 </div>
-                <div class="website-example">
-                    <img src="images/genericsample3.png" alt="Sample Website 3">
+                <div class="website-example" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <img src="file:///C:/Users/juliet/Downloads/images/genericsample3.png" alt="Sample Website 3">
                     <div class="website-example-caption">
-                        <h3>Sample Website 3</h3>
-                        <p>A dynamic landing page for a professional service</p>
+                        <h3>Professional Service Template</h3>
+                        <p>A dynamic landing page ideal for lawyers, accountants, and professional services</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- FAQ Section -->
+    <section id="faq">
         <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Click the button below to begin your journey to a professional online presence!</p>
-            <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Start Your Landing Page Today!</a>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="faq-question">Is PIPPS legitimate and reliable?</div>
+                    <div class="faq-answer">Absolutely! PIPPS is built by J.C Epiphany Limited (<a href="https://jcepiphany.com/" target="_blank">jcepiphany.com</a>), a company with over 25 years of proven software development experience. Our systems have powered healthcare operations and intelligent inventory management systems in continuous operation. We offer a 14-day money-back guarantee and secure hosting.</div>
+                </div>
+                <div class="faq-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="faq-question">What's your technical background?</div>
+                    <div class="faq-answer">We have more than 35 years of database and software expertise. Our proven technology has processed prescriptions, doctors' visits, and laboratory transactions. We also developed intelligent inventory management, issuing and distribution systems that are still operating after 25+ years.</div>
+                </div>
+                <div class="faq-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="faq-question">How long does it take to get my landing page?</div>
+                    <div class="faq-answer">Typically 3-5 business days after you complete our business information form. We'll keep you updated throughout the process.</div>
+                </div>
+                <div class="faq-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="faq-question">What if I don't like the design?</div>
+                    <div class="faq-answer">We offer one round of revisions included, plus our 30-day money-back guarantee if you're not completely satisfied.</div>
+                </div>
+                <div class="faq-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="faq-question">Can I update my content later?</div>
+                    <div class="faq-answer">Yes! Minor updates are included in your monthly plan. Larger changes start at just $15.</div>
+                </div>
+                <div class="faq-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="faq-question">Do I own my website?</div>
+                    <div class="faq-answer">You own all your content and branding. The design and hosting remain with PIPPS as part of our service model.</div>
+                </div>
+                <div class="faq-item" style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
+                    <div class="faq-question">What makes PIPPS different from other website builders?</div>
+                    <div class="faq-answer">We combine AI efficiency with human expertise - you get a custom design without the complexity of DIY builders or the cost of traditional designers.</div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 100px 0; background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5em; margin-bottom: 20px; font-weight: 700;">Ready to Launch Your Business Online?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Join the businesses already building their online presence with PIPPS. Early access pricing won't last long!</p>
+            <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button" style="background: white; color: #007bff !important; font-size: 1.1em; padding: 15px 35px;">Start Your Landing Page Today!</a>
+            <p style="margin-top: 30px; opacity: 0.9;">30-Day Money-Back Guarantee • Setup in 3-5 Days • No Technical Skills Required</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="logo-branding">
-                <img src="images/pipps_logo_official.png" alt="PIPPS Smart Apps Logo">
+                <img src="file:///C:/Users/juliet/Downloads/images/pipps_logo_official.png" alt="PIPPS Smart Apps Logo">
                 <h2>PIPPS Smart Apps</h2>
             </div>
             <p>© 2025 PIPPS Smart Apps. All rights reserved.</p>
             <p>Contact: <a href="mailto:info@pipps.app">info@pipps.app</a></p>
-            <p><a href="https://pipps.app" target="_blank">pipps.app</a> - Home of PIPPS Smart Apps</p>
-            <div class="footer-links">
-                <a href="terms/terms.html">Terms of Service & Privacy Policy</a>
+            <p><a href="https://pipps.app/" target="_blank">pipps.app</a> - Home of PIPPS Smart Apps</p>
+            <div style="margin-top: 30px;">
+                <a href="file:///C:/Users/juliet/Downloads/terms/terms.html">Terms of Service &amp; Privacy Policy</a>
             </div>
         </div>
     </footer>
-</body>
-</html>
 
-    <!-- Features Section -->
-    <section id="features">
-        <div class="container">
-            <h2>Why Choose PIPPS Landing Page Builder?</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <h3>Custom & Professional Design</h3>
-                    <p>We craft unique landing pages tailored to your brand's identity and specific business needs.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Mobile-Responsive</h3>
-                    <p>Your landing page will look fantastic and perform perfectly on any device, from desktops to smartphones.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Fast Turnaround</h3>
-                    <p>Get your online presence established quickly without the long wait times of traditional website development.</p>
-                </div>
-                 <div class="feature-item">
-                    <h3>Lead Generation Focused</h3>
-                    <p>Designed with clear calls-to-action to convert visitors into valuable leads or customers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-    <section id="how-it-works" class="section">
-        <div class="container">
-            <h2>Our Simple Process</h2>
-            <div class="how-it-works-steps">
-                <div class="step-item" data-step="1">
-                    <h3>Tell Us About Your Business</h3>
-                    <p>Fill out our easy-to-use form with your business name, description, services, contact info, and any images you have.</p>
-                </div>
-                <div class="step-item" data-step="2">
-                    <h3>We Design Your Page</h3>
-                    <p>Our expert team takes your information and crafts a stunning, customized landing page that represents your brand.</p>
-                </div>
-                <div class="step-item" data-step="3">
-                    <h3>Launch Your Online Presence</h3>
-                    <p>Once approved, your professional landing page is live, ready to attract new customers and grow your reach!</p>
-                </div>
-            </div>
-            <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button" style="margin-top: 50px;">Ready to Get Started?</a>
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.backdropFilter = 'blur(15px)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // Show form modal functionality
+        function showFormModal(formType) {
+            let formContent = '';
+            let formTitle = '';
             
-            <div class="text-center" style="margin-top: 30px;">
-                <p>After payment, you'll receive access to our easy-to-complete business information form</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="section">
-        <div class="container">
-            <h2>Simple, Transparent Pricing</h2>
-            <p>The perfect solution to get your business online quickly and professionally.</p>
-            
-            <div class="pricing-container">
-                <div class="pricing-header">
-                    <h3>Professional Landing Page Package</h3>
-                    <p>Everything you need to establish a powerful online presence.</p>
-                </div>
-                
-                <div class="pricing-main">
-                    <div class="pricing-price">$149</div>
-                    <div class="pricing-details">
-                        <p><strong>One-time setup fee</strong></p>
-                        <p>Plus $20/month Hosting & Maintenance</p>
-                    </div>
-                </div>
-                
-                <div class="pricing-features">
-                    <h4>What's Included:</h4>
-                    <ul>
-                        <li>Professional Custom Design</li>
-                        <li>Mobile-Responsive Layout</li>
-                        <li>Business Information Integration</li>
-                        <li>Contact Form & Social Links</li>
-                        <li>SEO Optimization</li>
-                        <li>Free yourname.pipps.app Subdomain</li>
-                        <li>Secure Hosting & Daily Backups</li>
-                        <li>Security Monitoring</li>
-                        <li>Technical Support</li>
-                    </ul>
-                </div>
-                
-                <div class="pricing-cta">
-                    <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Get Started Today</a>
-                </div>
-                
-                <div class="pricing-options">
-                    <h4>Optional Add-ons:</h4>
-                    <div class="pricing-options-grid">
-                        <div class="pricing-option-item">
-                            <h5>Additional Pages</h5>
-                            <p>$50 per page + $5/month</p>
+            switch(formType) {
+                case 'printable':
+                    formTitle = 'Printable Business Information Form';
+                    formContent = `
+                        <div style="padding: 20px; max-height: 400px; overflow-y: auto;">
+                            <p style="margin-bottom: 15px; color: #666;">This is a printable PDF form that you can download, print, and fill out by hand.</p>
+                            <h4 style="color: #007bff; margin-bottom: 10px;">What's included:</h4>
+                            <ul style="margin-bottom: 20px; padding-left: 20px;">
+                                <li>Clean, printer-friendly layout</li>
+                                <li>All business information fields</li>
+                                <li>Instructions for completion</li>
+                                <li>Guidelines for submission</li>
+                            </ul>
+                            <p style="font-size: 0.9em; color: #666; font-style: italic;">Note: You'll need to scan or photograph the completed form to submit it digitally.</p>
                         </div>
-                        <div class="pricing-option-item">
-                            <h5>Custom Domain</h5>
-                            <p>$25 one-time setup</p>
+                    `;
+                    break;
+                case 'fillable':
+                    formTitle = 'Fillable PDF Business Information Form';
+                    formContent = `
+                        <div style="padding: 20px; max-height: 400px; overflow-y: auto;">
+                            <p style="margin-bottom: 15px; color: #666;">This is an interactive PDF form that you can fill out digitally on your computer or mobile device.</p>
+                            <h4 style="color: #007bff; margin-bottom: 10px;">What's included:</h4>
+                            <ul style="margin-bottom: 20px; padding-left: 20px;">
+                                <li>Type directly into form fields</li>
+                                <li>Save your progress as you work</li>
+                                <li>Professional PDF output</li>
+                                <li>Easy digital submission</li>
+                            </ul>
+                            <p style="font-size: 0.9em; color: #666; font-style: italic;">Recommended: This is the easiest way to complete your business information.</p>
                         </div>
-                        <div class="pricing-option-item">
-                            <h5>Content Changes</h5>
-                            <p>Starting at $15</p>
+                    `;
+                    break;
+                case 'preview':
+                    formTitle = 'Business Information Form - Preview';
+                    formContent = `
+                        <div style="padding: 20px; max-height: 500px; overflow-y: auto; font-size: 0.9em;">
+                            <div style="text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+                                <h4 style="color: #007bff; margin: 0;">PIPPS Smart Apps</h4>
+                                <p style="margin: 5px 0; color: #666;">Business Information Form</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #007bff; border-bottom: 1px solid #eee; padding-bottom: 5px;">Business Details & Branding</h5>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>1. Business Name *</strong><br>
+                                    <div style="border-bottom: 1px solid #ccc; height: 20px; margin: 5px 0;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>2. Your Tagline or Slogan</strong><br>
+                                    <div style="border-bottom: 1px solid #ccc; height: 20px; margin: 5px 0;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>3. Preferred Heading Font Style</strong><br>
+                                    <div style="border-bottom: 1px solid #ccc; height: 20px; margin: 5px 0;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>4. Preferred Heading Color</strong><br>
+                                    <div style="border-bottom: 1px solid #ccc; height: 20px; margin: 5px 0;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>5. Your Logo</strong><br>
+                                    <small style="font-style: italic;">[Please attach the logo file separately when submitting this form.]</small>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #007bff; border-bottom: 1px solid #eee; padding-bottom: 5px;">About Your Business</h5>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>6. Your Business Story (the "why" behind your work)</strong><br>
+                                    <div style="border: 1px solid #ccc; height: 40px; margin: 5px 0; background: #f9f9f9;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>7. Your Mission</strong><br>
+                                    <div style="border: 1px solid #ccc; height: 30px; margin: 5px 0; background: #f9f9f9;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>8. What Makes You Unique?</strong><br>
+                                    <div style="border: 1px solid #ccc; height: 30px; margin: 5px 0; background: #f9f9f9;"></div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #007bff; border-bottom: 1px solid #eee; padding-bottom: 5px;">Marketing & SEO</h5>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>9. What is the main goal of your landing page? *</strong><br>
+                                    <div style="border-bottom: 1px solid #ccc; height: 20px; margin: 5px 0;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>10. Who is your ideal customer?</strong><br>
+                                    <div style="border-bottom: 1px solid #ccc; height: 20px; margin: 5px 0;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>11. List 5-10 keywords people would use to find you</strong><br>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 5px 0;">
+                                        <div style="border-bottom: 1px solid #ccc; height: 18px;">1. _______</div>
+                                        <div style="border-bottom: 1px solid #ccc; height: 18px;">6. _______</div>
+                                        <div style="border-bottom: 1px solid #ccc; height: 18px;">2. _______</div>
+                                        <div style="border-bottom: 1px solid #ccc; height: 18px;">7. _______</div>
+                                        <div style="border-bottom: 1px solid #ccc; height: 18px;">3. _______</div>
+                                        <div style="border-bottom: 1px solid #ccc; height: 18px;">8. _______</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #007bff; border-bottom: 1px solid #eee; padding-bottom: 5px;">Services / Products</h5>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>12. List up to 10 key services or products</strong><br>
+                                    <div style="margin: 5px 0;">
+                                        <div style="border-bottom: 1px solid #ccc; height: 18px; margin: 3px 0;">1. _______________________________</div>
+                                        <div style="border-bottom: 1px solid #ccc; height: 18px; margin: 3px 0;">2. _______________________________</div>
+                                        <div style="border-bottom: 1px solid #ccc; height: 18px; margin: 3px 0;">3. _______________________________</div>
+                                        <small style="color: #999;">... (continues to 10)</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <h5 style="color: #007bff; border-bottom: 1px solid #eee; padding-bottom: 5px;">Contact & Social Media</h5>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>13. Email Address for Customer Contact *</strong><br>
+                                    <div style="border-bottom: 1px solid #ccc; height: 20px; margin: 5px 0;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>14. Phone Number</strong><br>
+                                    <div style="border-bottom: 1px solid #ccc; height: 20px; margin: 5px 0;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>15. Is this a WhatsApp number?</strong> ☐ Yes ☐ No
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>16. Business Address</strong><br>
+                                    <div style="border: 1px solid #ccc; height: 30px; margin: 5px 0; background: #f9f9f9;"></div>
+                                </div>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>17-20. Social Media Links</strong><br>
+                                    <small>Facebook, Instagram, LinkedIn, Primary Website</small><br>
+                                    <div style="border-bottom: 1px solid #ccc; height: 18px; margin: 3px 0;"></div>
+                                </div>
+                            </div>
+
+                            <div style="margin-bottom: 15px;">
+                                <h5 style="color: #007bff; border-bottom: 1px solid #eee; padding-bottom: 5px;">Business Images</h5>
+                                <div style="margin: 10px 0; color: #666;">
+                                    <strong>21. Up to 5 images</strong><br>
+                                    <small style="font-style: italic;">[Please attach image files separately when submitting this form. Label them clearly (e.g., "Product 1," "Team Photo").]</small>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #f0f4f8; padding: 15px; border-radius: 5px; margin-top: 20px; text-align: center;">
+                                <small style="color: #666;">* Required fields | Complete form available after purchase</small>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    `;
+                    break;
+            }
             
-            <div class="pricing-note">
-                <p>All packages include a free custom subdomain (yourname.pipps.app). Our monthly plan ensures your page remains fast, secure, and online. Need something custom? <a href="#contact">Contact us</a> for a personalized quote.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="ai-process" class="section">
-        <div class="container">
-            <h2>How We Transform Your Information</h2>
-            <p>See how our AI-powered system transforms your business information into a stunning landing page</p>
+            // Create modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10000;
+            `;
             
-            <div class="ai-process">
-                <div class="ai-process-steps">
-                    <div class="ai-process-step">
-                        <h3>Step 1: You Complete Our Business Form</h3>
-                        <img src="images/simplified_form_mockup.png" alt="Business Information Form" class="ai-process-image">
+            modal.innerHTML = `
+                <div style="
+                    background: white;
+                    max-width: 500px;
+                    width: 90%;
+                    border-radius: 10px;
+                    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                ">
+                    <div style="
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 20px 20px 0 20px;
+                        border-bottom: 1px solid #eee;
+                    ">
+                        <h3 style="margin: 0; color: #333; font-size: 1.2em;">${formTitle}</h3>
+                        <button onclick="this.closest('.modal').remove()" style="
+                            background: none;
+                            border: none;
+                            font-size: 24px;
+                            cursor: pointer;
+                            color: #999;
+                            padding: 5px;
+                        ">&times;</button>
                     </div>
-                    <div class="ai-process-arrow">↓</div>
-                    <div class="ai-process-step">
-                        <h3>Step 2: Our AI Creates Your Custom Landing Page</h3>
-                        <p>Based on your information, our system generates a professional website tailored to your business</p>
-                    </div>
-                    <div class="ai-process-arrow">↓</div>
-                    <div class="ai-process-step">
-                        <h3>Step 3: Your Business Gets a Professional Online Presence</h3>
-                        <p>Here are examples of landing pages created with our system:</p>
+                    ${formContent}
+                    <div style="
+                        padding: 20px;
+                        text-align: center;
+                        border-top: 1px solid #eee;
+                        background: #f8f9fa;
+                        border-radius: 0 0 10px 10px;
+                    ">
+                        <p style="margin: 0 0 15px 0; color: #666; font-size: 0.9em;">Forms will be available after purchase</p>
+                        <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" 
+                           style="
+                               background: #007bff;
+                               color: white;
+                               padding: 10px 20px;
+                               text-decoration: none;
+                               border-radius: 5px;
+                               font-weight: 600;
+                           "
+                           target="_blank">Order Your Landing Page</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="examples" class="section">
-        <div class="container">
-            <h2>Website Examples</h2>
-            <p>Check out these stunning landing pages we've created for our clients</p>
+            `;
             
-            <div class="website-examples">
-                <div class="website-example">
-                    <img src="images/genericsample1.png" alt="Sample Website 1">
-                    <div class="website-example-caption">
-                        <h3>Sample Website 1</h3>
-                        <p>A professional landing page for a service business</p>
-                    </div>
-                </div>
-                <div class="website-example">
-                    <img src="images/genericsample2.png" alt="Sample Website 2">
-                    <div class="website-example-caption">
-                        <h3>An attractive landing page for a local business</p>
-                    </div>
-                </div>
-                <div class="website-example">
-                    <img src="images/genericsample3.png" alt="Sample Website 3">
-                    <div class="website-example-caption">
-                        <h3>Sample Website 3</h3>
-                        <p>A dynamic landing page for a professional service</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            modal.className = 'modal';
+            modal.onclick = (e) => {
+                if (e.target === modal) modal.remove();
+            };
+            
+            document.body.appendChild(modal);
+        }
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Click the button below to begin your journey to a professional online presence!</p>
-            <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" class="cta-button">Start Your Landing Page Today!</a>
-        </div>
-    </section>
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    <footer class="footer">
-        <div class="container">
-            <div class="logo-branding">
-                <img src="images/pipps_logo_official.png" alt="PIPPS Smart Apps Logo">
-                <h2>PIPPS Smart Apps</h2>
-            </div>
-            <p>© 2025 PIPPS Smart Apps. All rights reserved.</p>
-            <p>Contact: <a href="mailto:info@pipps.app">info@pipps.app</a></p>
-            <p><a href="https://pipps.app" target="_blank">pipps.app</a> - Home of PIPPS Smart Apps</p>
-            <div class="footer-links">
-                <a href="terms/terms.html">Terms of Service & Privacy Policy</a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-item, .step-item, .need-item, .website-example, .faq-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///C:/Users/juliet/Downloads/business_info_form%20(2).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIPPS Smart Apps - Business Information Form</title>
+    
+    <style>
+      /* Tailwind CSS equivalent styles */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; }
+      
+      .bg-gray-100 { background-color: #f3f4f6; }
+      .bg-white { background-color: #ffffff; }
+      .bg-blue-50 { background-color: #eff6ff; }
+      .bg-blue-600 { background-color: #2563eb; }
+      .bg-blue-700 { background-color: #1d4ed8; }
+      
+      .text-gray-800 { color: #1f2937; }
+      .text-gray-700 { color: #374151; }
+      .text-gray-600 { color: #4b5563; }
+      .text-gray-500 { color: #6b7280; }
+      .text-gray-400 { color: #9ca3af; }
+      .text-white { color: #ffffff; }
+      .text-red-500 { color: #ef4444; }
+      .text-blue-600 { color: #2563eb; }
+      
+      .border-gray-400 { border-color: #9ca3af; }
+      .border-gray-200 { border-color: #e5e7eb; }
+      .border-blue-200 { border-color: #bfdbfe; }
+      
+      .min-h-screen { min-height: 100vh; }
+      .min-h-24 { min-height: 24px; }
+      
+      .p-4 { padding: 1rem; }
+      .p-6 { padding: 1.5rem; }
+      .p-1 { padding: 0.25rem; }
+      .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+      .px-4 { padding-left: 1rem; padding-right: 1rem; }
+      .pb-2 { padding-bottom: 0.5rem; }
+      .pb-5 { padding-bottom: 1.25rem; }
+      .pt-5 { padding-top: 1.25rem; }
+      
+      .m-0 { margin: 0; }
+      .mb-1 { margin-bottom: 0.25rem; }
+      .mb-2 { margin-bottom: 0.5rem; }
+      .mb-4 { margin-bottom: 1rem; }
+      .mb-5 { margin-bottom: 1.25rem; }
+      .mb-6 { margin-bottom: 1.5rem; }
+      .mb-8 { margin-bottom: 2rem; }
+      .mt-1 { margin-top: 0.25rem; }
+      .mt-2 { margin-top: 0.5rem; }
+      .mt-4 { margin-top: 1rem; }
+      .mt-10 { margin-top: 2.5rem; }
+      .mr-2 { margin-right: 0.5rem; }
+      
+      .max-w-4xl { max-width: 56rem; }
+      .mx-auto { margin-left: auto; margin-right: auto; }
+      
+      .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+      .rounded-lg { border-radius: 0.5rem; }
+      .rounded-sm { border-radius: 0.125rem; }
+      
+      .text-center { text-align: center; }
+      .text-right { text-align: right; }
+      .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+      .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+      .text-base { font-size: 1rem; line-height: 1.5rem; }
+      .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+      .text-xs { font-size: 0.75rem; line-height: 1rem; }
+      
+      .font-bold { font-weight: 700; }
+      .font-semibold { font-weight: 600; }
+      .italic { font-style: italic; }
+      
+      .border { border-width: 1px; }
+      .border-2 { border-width: 2px; }
+      .border-b { border-bottom-width: 1px; }
+      .border-b-2 { border-bottom-width: 2px; }
+      .border-t-2 { border-top-width: 2px; }
+      
+      .block { display: block; }
+      .flex { display: flex; }
+      .inline-block { display: inline-block; }
+      .grid { display: grid; }
+      .list-disc { list-style-type: disc; }
+      .list-inside { list-style-position: inside; }
+      
+      .items-center { align-items: center; }
+      .justify-center { justify-content: center; }
+      
+      .gap-2 { gap: 0.5rem; }
+      .gap-6 { gap: 1.5rem; }
+      .gap-8 { gap: 2rem; }
+      .gap-x-6 { column-gap: 1.5rem; }
+      .gap-y-1 { row-gap: 0.25rem; }
+      .gap-y-2 { row-gap: 0.5rem; }
+      
+      .space-y-1 > * + * { margin-top: 0.25rem; }
+      .space-y-2 > * + * { margin-top: 0.5rem; }
+      
+      .w-4 { width: 1rem; }
+      .w-5 { width: 1.25rem; }
+      .w-6 { width: 1.5rem; }
+      .w-64 { width: 16rem; }
+      .h-4 { height: 1rem; }
+      .h-5 { height: 1.25rem; }
+      .h-auto { height: auto; }
+      
+      .flex-1 { flex: 1 1 0%; }
+      
+      .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+      
+      .fixed { position: fixed; }
+      .top-4 { top: 1rem; }
+      .right-4 { right: 1rem; }
+      
+      .tracking-tight { letter-spacing: -0.025em; }
+      .leading-relaxed { line-height: 1.625; }
+      
+      .break-inside-avoid { break-inside: avoid; }
+      
+      .hover\:bg-blue-700:hover { background-color: #1d4ed8; }
+      .focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
+      .focus\:ring-2:focus { --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color); --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color); box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000); }
+      .focus\:ring-blue-500:focus { --tw-ring-opacity: 1; --tw-ring-color: rgba(59, 130, 246, var(--tw-ring-opacity)); }
+      .focus\:ring-opacity-50:focus { --tw-ring-opacity: 0.5; }
+      
+      .transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+      
+      /* Custom styles */
+      .min-h-24 { min-height: 24px; }
+      .answer-line { border-bottom: 1px solid #9ca3af; min-height: 24px; margin-bottom: 0.25rem; }
+      .checkbox { width: 1rem; height: 1rem; border: 2px solid #9ca3af; border-radius: 0.125rem; }
+      
+      /* Responsive design */
+      @media (min-width: 640px) {
+        .sm\:p-8 { padding: 2rem; }
+        .sm\:p-10 { padding: 2.5rem; }
+      }
+      
+      @media (min-width: 768px) {
+        .md\:p-12 { padding: 3rem; }
+        .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      
+      @media print {
+        body { margin: 0; font-size: 10.5pt; }
+        .print-hidden { display: none !important; }
+        .print-break-before-page { break-before: page; }
+        .bg-gray-100 { background-color: white !important; }
+        .shadow-lg { box-shadow: none !important; }
+        .rounded-lg { border-radius: 0 !important; }
+        .p-1 { padding: 0.25rem !important; }
+      }
+    </style>
+</head>
+<body>
+    <main class="bg-gray-100 min-h-screen p-4 sm:p-8">
+        <div class="max-w-4xl mx-auto bg-white p-6 sm:p-10 md:p-12 shadow-lg rounded-lg font-sans text-gray-800 leading-relaxed">
+            
+            <header class="text-center mb-8 pb-5 border-b-2 border-gray-200">
+                <div class="flex justify-center mb-4">
+                    <img src="./business_info_form printable_files/297e2c_219dd8a8a2004c38ae6baf48171cea73~mv2.png" alt="PIPPS Smart Apps Logo" class="w-64 h-auto">
+                </div>
+                <h1 class="text-3xl font-bold text-blue-600 tracking-tight">Business Information Form</h1>
+                <p class="text-gray-500 mt-1">Help us create your amazing landing page by PIPPS Smart Apps</p>
+            </header>
+
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 text-sm">
+                <h3 class="font-bold text-blue-600 text-base mb-2">Instructions:</h3>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li>Complete all required fields (marked with <span class="text-red-500 font-bold">*</span>).</li>
+                    <li>Use a pen to fill in your responses clearly if printing.</li>
+                    <li>Attach logos and images separately when returning this form.</li>
+                    <li>For links, write full URLs (e.g., https://www.instagram.com/yourpage) or include them in the attachment document with a description.</li>
+                    <li>For handwritten forms: scan or take clear photos and send.</li>
+                    <li><span class="font-bold text-red-500">Payment is due at: <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" target="_blank" class="text-blue-600 underline hover:text-blue-800">https://jcepiphany.myshopify.com/products/small-business-landing-page</a> and form is submitted via link provided after payment.</span></li>
+                </ul>
+            </div>
+            
+            <section class="mb-6 break-inside-avoid">
+                <h2 class="text-xl font-bold text-blue-600 border-b-2 border-gray-200 pb-2 mb-5">Business Details &amp; Branding</h2>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">1. Business Name <span class="text-red-500">*</span></label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">2. Your Tagline or Slogan</label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">3. Preferred Heading Font Style</label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">4. Preferred Heading Color</label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">5. Your Logo</label>
+                    <p class="text-xs italic text-gray-500 mt-1">[Please attach the logo file separately when returning this form.]</p>
+                </div>
+            </section>
+            
+            <section class="mb-6 break-inside-avoid">
+                <h2 class="text-xl font-bold text-blue-600 border-b-2 border-gray-200 pb-2 mb-5">About Your Business</h2>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">6. Your Business Story (the 'why' behind your work)</label>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">7. Your Mission</label>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">8. What Makes You Unique?</label>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                </div>
+            </section>
+            
+            <section class="mb-6 break-inside-avoid">
+                <h2 class="text-xl font-bold text-blue-600 border-b-2 border-gray-200 pb-2 mb-5">Marketing &amp; SEO</h2>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">9. What is the main goal of your landing page? <span class="text-red-500">*</span></label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">10. Who is your ideal customer?</label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">11. List 5–10 keywords people would use to find you</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 mt-2">
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">1.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">2.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">3.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">4.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">5.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">6.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">7.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">8.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">9.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">10.</span><div class="flex-1 answer-line"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="print-break-before-page"></div>
+
+            <section class="mb-6 break-inside-avoid">
+                <h2 class="text-xl font-bold text-blue-600 border-b-2 border-gray-200 pb-2 mb-5">Services / Products</h2>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">12. List up to 10 key services or products</label>
+                    <div class="space-y-2 mt-2">
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">1.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">2.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">3.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">4.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">5.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">6.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">7.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">8.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">9.</span><div class="flex-1 answer-line"></div></div>
+                        <div class="flex items-center gap-2"><span class="font-bold text-gray-400 w-6 text-right">10.</span><div class="flex-1 answer-line"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-6 break-inside-avoid">
+                <h2 class="text-xl font-bold text-blue-600 border-b-2 border-gray-200 pb-2 mb-5">Contact &amp; Social Media</h2>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">13. Email Address for Customer Contact <span class="text-red-500">*</span></label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">14. Phone Number</label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">15. Is this a WhatsApp number?</label>
+                    <div class="flex gap-8 mt-2 text-sm">
+                        <div class="flex items-center gap-2"><div class="checkbox"></div> Yes</div>
+                        <div class="flex items-center gap-2"><div class="checkbox"></div> No</div>
+                    </div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">16. Business Address</label>
+                    <div class="answer-line"></div>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">17. Primary Website Link (e.g., Etsy, Booking Page)</label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">18. Facebook</label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">19. Instagram</label>
+                    <div class="answer-line"></div>
+                </div>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">20. LinkedIn / Other</label>
+                    <div class="answer-line"></div>
+                </div>
+            </section>
+            
+            <section class="mb-6 break-inside-avoid">
+                <h2 class="text-xl font-bold text-blue-600 border-b-2 border-gray-200 pb-2 mb-5">Business Images</h2>
+                
+                <div class="mb-5 break-inside-avoid">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">21. Up to 5 images</label>
+                    <p class="text-xs italic text-gray-500 mt-1">[Please attach image files separately. Label them clearly (e.g., "Product 1," "Team Photo").]</p>
+                </div>
+            </section>
+            
+            <footer class="text-center mt-10 pt-5 border-t-2 border-gray-200 text-xs">
+                <p class="font-bold text-gray-600">Thank you for completing the PIPPS Landing Page Business Information Form.</p>
+                <p class="text-gray-500 mt-1">Please return this form along with any supporting files to link provided after payment.</p>
+                <p class="text-gray-500 mt-2">Attached links can be included in the attachment document with a description of the link.</p>
+                <p class="text-gray-500 mt-1">For handwritten forms: scan or take clear photos and send.</p>
+                <p class="font-bold text-red-500 mt-2">Payment is due at: <a href="https://jcepiphany.myshopify.com/products/small-business-landing-page" target="_blank" class="text-blue-600 underline hover:text-blue-800">https://jcepiphany.myshopify.com/products/small-business-landing-page</a> and form is submitted via link provided after payment.</p>
+                <p class="text-gray-500 mt-2">For support contact: <a href="mailto:pages@pipps.app" class="text-blue-600 underline hover:text-blue-800">pages@pipps.app</a></p>
+                <div class="mt-4 font-semibold text-gray-500 text-xs">
+                    <a href="https://pages.pipps.app/" target="_blank" class="text-blue-600 underline hover:text-blue-800">PIPPS Landing Page Builder</a> | Parent Company: <a href="https://jcepiphany.com/" target="_blank" class="text-blue-600 underline hover:text-blue-800">J.C Epiphany Limited</a>
+                </div>
+            </footer>
+
+        </div>
+        
+        <button onclick="window.print()" class="print-hidden fixed top-4 right-4 bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v6a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7V9h6v3z" clip-rule="evenodd"></path>
+            </svg>
+            Print Form
+        </button>
+    </main>
+
+</body></html>
