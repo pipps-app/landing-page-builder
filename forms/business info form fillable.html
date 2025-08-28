@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIPPS Smart Apps - Business Information Form (Fillable)</title>
+    <style>
+        @media print {
+            body { margin: 0; font-size: 10.5pt; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.4in;
+            line-height: 1.3;
+            color: #333;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .header-logo img {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        
+        .header .form-title {
+            font-size: 26px; 
+            font-weight: bold;
+            color: #2563eb;
+            margin: 0 0 5px 0;
+        }
+        
+        .header .form-subtitle {
+            font-size: 14px; 
+            color: #666;
+            margin: 0;
+        }
+
+        .section {
+            margin-bottom: 25px; 
+            break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 16px; 
+            font-weight: bold;
+            color: #2563eb;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px; 
+            margin-bottom: 15px; 
+        }
+        
+        .question {
+            margin-bottom: 18px; 
+            break-inside: avoid;
+        }
+        
+        .question-label {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 6px; 
+            display: block;
+            font-size: 13px;
+        }
+        
+        .required {
+            color: #ef4444;
+        }
+        
+        /* Styles for Fillable Fields */
+        .fillable-line {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #d1d5db;
+            padding: 2px 0;
+            font-family: inherit;
+            font-size: 10pt;
+            background: transparent;
+        }
+
+        .fillable-box {
+            width: calc(100% - 8px);
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            padding: 3px;
+            font-family: inherit;
+            font-size: 10pt;
+            resize: vertical;
+            background-color: #f8f9fa;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 25px;
+            margin-top: 8px;
+            align-items: center;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 15px; 
+            margin-top: 8px;
+        }
+        
+        .keyword-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .keyword-number {
+            font-weight: bold;
+            color: #6b7280;
+        }
+
+        .numbered-list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px; 
+        }
+        
+        .numbered-list-item span {
+            font-weight: bold;
+            margin-right: 8px;
+            min-width: 20px;
+            color: #6b7280;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px; 
+            padding-top: 15px; 
+            border-top: 2px solid #e2e8f0;
+            color: #6b7280;
+            font-size: 12px;
+        }
+        
+        .note {
+            font-style: italic;
+            color: #6b7280;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAAGACAYAAAD36nTuAAAKjElEQVR4nO3dMXLDMAxAUWTa/a88NU2g1qUFC3bvCewr3FpIAsmPz/f7/f4BAACAuSRJkpMkyS/8fQYAAGB8W5Ik97/yZ5IkmXw+BgAAYHySJEly//2vP5MkycgEAADGtyV/JkmS3P9/lCRJ9v4GAAAY35b8mb9Lkvv//woAgPGtJH8mSZIkyf3/JwAAYHybJElycDIBAIDxrSR/JkmSJPf/nwAAYHybJEkmyAQAAOOkJH8mSZIk9/+fAABgfJskyfUkyQQAAOOktCR/JkmSk8kEAADjpCV/JkmS3P9/AgCA8W2SJMlEMgEAgHFS8j8jSZIk9/+fAABgfJskSVYmAQAA46SkfyZJkpPJBAAA46Tkb0uSJPf/nwAAYHybJEmmkwkAAAZISf4MSZK8TCYAAAgkSVYmAQAAwSRJsp1MAAAwSJLsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsl1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAAAwSJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTCYAAAgkSVYmAQAAwSRJsp1MAgAASJKsTAIAACBJEgEAYISkJEkygUYAABgkSVYmAQAA" alt="PIPPS Smart Apps Logo">
+        </div>
+        <h1 class="form-title">Business Information Form</h1>
+        <p class="form-subtitle">Help us create your amazing landing page by PIPPS Smart Apps</p>
+    </div>
+    
+    <form>
+        <div class="section">
+            <h2 class="section-title">Business Details & Branding</h2>
+            <div class="question"><label class="question-label" for="businessName">1. Business Name <span class="required">*</span></label><input type="text" id="businessName" name="businessName" class="fillable-line"></div>
+            <div class="question"><label class="question-label" for="tagline">2. Your Tagline or Slogan</label><input type="text" id="tagline" name="tagline" class="fillable-line"></div>
+            <div class="question"><label class="question-label" for="fontStyle">3. Preferred Heading Font Style</label><input type="text" id="fontStyle" name="fontStyle" class="fillable-line"></div>
+            <div class="question"><label class="question-label" for="fontColor">4. Preferred Heading Color</label><input type="text" id="fontColor" name="fontColor" class="fillable-line"></div>
+            <div class="question"><label class="question-label">5. Your Logo</label><div class="note">[Please attach the logo file separately when returning this form.]</div></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">About Your Business</h2>
+            <div class="question"><label class="question-label" for="businessStory">6. Your Business Story (the "why" behind your work)</label><textarea id="businessStory" name="businessStory" class="fillable-box" rows="3"></textarea></div>
+            <div class="question"><label class="question-label" for="businessMission">7. Your Mission</label><textarea id="businessMission" name="businessMission" class="fillable-box" rows="2"></textarea></div>
+            <div class="question"><label class="question-label" for="uniqueSellingPoint">8. What Makes You Unique?</label><textarea id="uniqueSellingPoint" name="uniqueSellingPoint" class="fillable-box" rows="2"></textarea></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Marketing & SEO</h2>
+            <div class="question"><label class="question-label" for="mainGoal">9. What is the main goal of your landing page? <span class="required">*</span></label><input type="text" id="mainGoal" name="mainGoal" class="fillable-line"></div>
+            <div class="question"><label class="question-label" for="idealCustomer">10. Who is your ideal customer?</label><input type="text" id="idealCustomer" name="idealCustomer" class="fillable-line"></div>
+            <div class="question">
+                <label class="question-label">11. List 5–10 keywords people would use to find you</label>
+                <div class="keywords-grid">
+                    <div class="keyword-item"><span class="keyword-number">1.</span><input type="text" name="keyword1" class="fillable-line"></div>
+                    <div class="keyword-item"><span class="keyword-number">6.</span><input type="text" name="keyword6" class="fillable-line"></div>
+                    <div class="keyword-item"><span class="keyword-number">2.</span><input type="text" name="keyword2" class="fillable-line"></div>
+                    <div class="keyword-item"><span class="keyword-number">7.</span><input type="text" name="keyword7" class="fillable-line"></div>
+                    <div class="keyword-item"><span class="keyword-number">3.</span><input type="text" name="keyword3" class="fillable-line"></div>
+                    <div class="keyword-item"><span class="keyword-number">8.</span><input type="text" name="keyword8" class="fillable-line"></div>
+                    <div class="keyword-item"><span class="keyword-number">4.</span><input type="text" name="keyword4" class="fillable-line"></div>
+                    <div class="keyword-item"><span class="keyword-number">9.</span><input type="text" name="keyword9" class="fillable-line"></div>
+                    <div class="keyword-item"><span class="keyword-number">5.</span><input type="text" name="keyword5" class="fillable-line"></div>
+                    <div class="keyword-item"><span class="keyword-number">10.</span><input type="text" name="keyword10" class="fillable-line"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section page-break">
+            <h2 class="section-title">Services / Products</h2>
+            <div class="question">
+                <label class="question-label">12. List up to 10 key services or products</label>
+                <div class="numbered-list">
+                    <div class="numbered-list-item"><span>1.</span><input type="text" name="service1" class="fillable-line"></div>
+                    <div class="numbered-list-item"><span>2.</span><input type="text" name="service2" class="fillable-line"></div>
+                    <div class="numbered-list-item"><span>3.</span><input type="text" name="service3" class="fillable-line"></div>
+                    <div class="numbered-list-item"><span>4.</span><input type="text" name="service4" class="fillable-line"></div>
+                    <div class="numbered-list-item"><span>5.</span><input type="text" name="service5" class="fillable-line"></div>
+                    <div class="numbered-list-item"><span>6.</span><input type="text" name="service6" class="fillable-line"></div>
+                    <div class="numbered-list-item"><span>7.</span><input type="text" name="service7" class="fillable-line"></div>
+                    <div class="numbered-list-item"><span>8.</span><input type="text" name="service8" class="fillable-line"></div>
+                    <div class="numbered-list-item"><span>9.</span><input type="text" name="service9" class="fillable-line"></div>
+                    <div class="numbered-list-item"><span>10.</span><input type="text" name="service10" class="fillable-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Contact & Social Media</h2>
+            <div class="question"><label class="question-label" for="email">13. Email Address for Customer Contact <span class="required">*</span></label><input type="email" id="email" name="email" class="fillable-line"></div>
+            <div class="question"><label class="question-label" for="phone">14. Phone Number</label><input type="tel" id="phone" name="phone" class="fillable-line"></div>
+            <div class="question">
+                <label class="question-label">15. Is this a WhatsApp number?</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item"><input type="checkbox" id="whatsappYes" name="isWhatsapp" value="yes"><label for="whatsappYes">Yes</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="whatsappNo" name="isWhatsapp" value="no"><label for="whatsappNo">No</label></div>
+                </div>
+            </div>
+            <div class="question"><label class="question-label" for="address">16. Business Address</label><textarea id="address" name="address" class="fillable-box" rows="2"></textarea></div>
+            <div class="question"><label class="question-label" for="website">17. Primary Website Link (e.g., Etsy, Booking Page)</label><input type="url" id="website" name="website" class="fillable-line"></div>
+            <div class="question"><label class="question-label" for="facebook">18. Facebook</label><input type="url" id="facebook" name="facebook" class="fillable-line"></div>
+            <div class="question"><label class="question-label" for="instagram">19. Instagram</label><input type="url" id="instagram" name="instagram" class="fillable-line"></div>
+            <div class="question"><label class="question-label" for="linkedin">20. LinkedIn / Other</label><input type="url" id="linkedin" name="linkedin" class="fillable-line"></div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">Business Images</h2>
+            <div class="question">
+                <label class="question-label">21. Up to 5 images</label>
+                <div class="note">[Please attach image files separately. Label them clearly (e.g., "Product 1," "Team Photo").]</div>
+            </div>
+        </div>
+    </form>
+
+    <div class="footer">
+        <p><strong>Thank you for completing the PIPPS Smart Apps Business Information Form.</strong></p>
+        <p>Please return this form along with any supporting files to your project coordinator.</p>
+        <div class="parent-company">
+            Parent Company: J.C Epiphany Limited – https://jcepiphany.com/
+        </div>
+    </div>
+</body>
+</html>
