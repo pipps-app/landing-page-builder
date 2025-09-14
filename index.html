@@ -702,26 +702,76 @@
             margin-top: 50px;
         }
 
-        .website-example {
+        .website-example, .sample {
             background: white;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0,0,0,0.1);
             transition: all 0.4s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
-        .website-example:hover {
+        .website-example:hover, .sample:hover {
             transform: translateY(-10px);
             box-shadow: 0 25px 60px rgba(0,123,255,0.15);
         }
 
-        .website-example img {
+        .website-example img, .sample img {
             width: 100%;
             height: 250px;
             object-fit: cover;
             object-position: top;
             background: linear-gradient(45deg, #e9ecef 25%, transparent 25%), linear-gradient(-45deg, #e9ecef 25%, transparent 25%);
             background-size: 20px 20px;
+        }
+
+        .sample-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        .sample h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        .sample p {
+            color: #666;
+            line-height: 1.7;
+            margin-top: 0;
+            margin-bottom: auto;
+            flex: 1;
+        }
+
+        .sample-link {
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            padding: 12px 20px;
+            border: 2px solid #007bff;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+            margin: 20px auto 0 auto;
+            max-width: 180px;
+            margin-top: auto;
+        }
+
+        .sample-link:hover {
+            background: #007bff;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
         }
 
         .website-example-caption {
@@ -1051,23 +1101,29 @@
             <p class="examples-subtitle">Here's what your landing page could look like</p>
             
             <div class="website-examples">
-                <div class="website-example" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
-                    <img src="images/genericsample1.png" alt="Sample Website 1" class="example-img-clickable">
-                    <div class="website-example-caption">
+                <!-- Sample 1: JC Castile Liquid Soaps -->
+                <div class="sample" onclick="previewImage('images/genericsample1.png')">
+                    <img src="images/genericsample1.png" alt="JC Castile Liquid Soaps">
+                    <div class="sample-content">
                         <h3>Clean Business Template</h3>
                         <p>Minimalist design with clear navigation and organized content. Perfect for professional services and B2B companies.</p>
                     </div>
                 </div>
-                <div class="website-example" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
-                    <img src="images/genericsample2.png" alt="Sample Website 2" class="example-img-clickable">
-                    <div class="website-example-caption">
+
+                <!-- Sample 2: Rapid Grow Organic Fertilizers -->
+                <div class="sample" onclick="previewImage('images/genericsample2.png')">
+                    <img src="images/genericsample2.png" alt="Rapid Grow Organic Fertilizers">
+                    <div class="sample-content">
                         <h3>Rapid Grow</h3>
                         <p>High-conversion design focused on driving fast business growth with compelling calls-to-action and lead magnets.</p>
+                        <a href="https://rapidgrow.jcepiphany.com/" target="_blank" class="sample-link" onclick="event.stopPropagation()">View Live Site →</a>
                     </div>
                 </div>
-                <div class="website-example" style="opacity: 0; transform: translateY(30px); transition: 0.6s;">
-                    <img src="images/genericsample3.png" alt="Sample Website 3" class="example-img-clickable">
-                    <div class="website-example-caption">
+
+                <!-- Sample 3: Premium Bookends -->
+                <div class="sample" onclick="previewImage('images/genericsample3.png')">
+                    <img src="images/genericsample3.png" alt="Premium Bookends">
+                    <div class="sample-content">
                         <h3>Premium Bookends</h3>
                         <p>Product-focused e-commerce design showcasing quality craftsmanship with clear product photography and easy online ordering.</p>
                     </div>
@@ -1458,6 +1514,65 @@
             };
             
             document.body.appendChild(modal);
+        }
+
+        // Image preview functionality
+        function previewImage(imageSrc) {
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.9);
+                z-index: 9999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            `;
+            
+            modal.innerHTML = `
+                <img src="${imageSrc}" style="
+                    max-width: 95%;
+                    max-height: 95%;
+                    object-fit: contain;
+                    border-radius: 8px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                ">
+                <button onclick="this.parentElement.remove()" style="
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    background: rgba(255,255,255,0.2);
+                    color: white;
+                    border: none;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    font-size: 24px;
+                    cursor: pointer;
+                    backdrop-filter: blur(10px);
+                    transition: all 0.3s ease;
+                " onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">&times;</button>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Close on click anywhere
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal || e.target.tagName === 'IMG') {
+                    modal.remove();
+                }
+            });
+            
+            // Close on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    modal.remove();
+                }
+            });
         }
 
         // Intersection Observer for animations
